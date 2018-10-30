@@ -18,8 +18,8 @@ from cdstarcat import Catalog, Object
 from pyamsd.api import Amsd
 
 
-def _get_catalog(args, cattype = 'imagefiles'):
-    if cattype == 'imagefiles':
+def _get_catalog(args, cattype = 'mediafiles'):
+    if cattype == 'mediafiles':
         return Catalog(
             args.repos / 'imagefiles' / 'catalog.json',
             cdstar_url=os.environ.get('CDSTAR_URL', 'https://cdstar.shh.mpg.de'),
@@ -33,15 +33,17 @@ def _api(args):
 
 
 @command()
-def upload_images(args):
+def upload_mediafiles(args):
     """
-    Uploads image files from the passed directory to the CDSTAR server,
+    Uploads media files from the passed directory to the CDSTAR server,
     if an object identified by metadata's 'name' exists it will be deleted first
     """
 
-    supported_image_types = ['png', 'gif', 'jpg', 'jpeg', 'tif', 'tiff']
+    supported_types = {'imagefile': ['png', 'gif', 'jpg', 'jpeg', 'tif', 'tiff'],
+                       'pdffile':   ['pdf'],
+                       'moviefile': ['mp4']}
 
-    with _get_catalog(args, 'imagefiles') as cat:
+    with _get_catalog(args, 'mediafiles') as cat:
 
         name_map = {obj.metadata['name']: obj for obj in cat}
 
@@ -49,8 +51,14 @@ def upload_images(args):
 
             print(ifn.name)
 
-            if ifn.suffix[1:].lower() not in supported_image_types:
-                print('No supported image format - skipping {0}'.format(ifn.name))
+            fmt = ifn.suffix[1:].lower()
+            meta_type = None
+            for k in supported_types:
+                if fmt in supported_types[k]:
+                    meta_type = k
+                    break
+            if meta_type is None:
+                print('No supported media format - skipping {0}'.format(fmt))
                 continue
 
             # Lookup the image name in catalog:
@@ -64,7 +72,7 @@ def upload_images(args):
 
             md = {'collection': 'amsd',
                     'name': stem,
-                    'type': 'imagefile',
+                    'type': meta_type,
                     'path': ifn.name
                 }
 
