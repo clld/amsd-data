@@ -12,7 +12,7 @@ from itertools import groupby
 from tqdm import tqdm
 from clldutils.clilib import ArgumentParserWithLogging, command
 from clldutils.dsv import UnicodeWriter
-from clldutils.path import md5, write_text
+from clldutils.path import md5, write_text, as_unicode
 from cdstarcat import Catalog, Object
 
 from pyamsd.api import Amsd
@@ -49,9 +49,9 @@ def upload_mediafiles(args):
 
             fmt = ifn.suffix[1:].lower()
             meta_type = None
-            for k in supported_types:
-                if fmt in supported_types[k]:
-                    meta_type = k
+            for t, suffixes in supported_types.items():
+                if fmt in suffixes:
+                    meta_type = t
                     break
             if meta_type is None:
                 print('No supported media format - skipping {0}'.format(fmt))
@@ -59,9 +59,9 @@ def upload_mediafiles(args):
 
             md = {
                 'collection': 'amsd',
-                'name': ifn.stem,
+                'name': as_unicode(ifn.stem),
                 'type': meta_type,
-                'path': ifn.name
+                'path': as_unicode(ifn.name)
             }
 
             # Create the new object
