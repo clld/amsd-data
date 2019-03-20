@@ -18,14 +18,13 @@ from cdstarcat import Catalog, Object
 from pyamsd.api import Amsd
 
 
-def _get_catalog(args, cattype = 'mediafiles'):
-    if cattype == 'mediafiles':
-        return Catalog(
-            args.repos / 'imagefiles' / 'catalog.json',
-            cdstar_url=os.environ.get('CDSTAR_URL', 'https://cdstar.shh.mpg.de'),
-            cdstar_user=os.environ.get('CDSTAR_USER'),
-            cdstar_pwd=os.environ.get('CDSTAR_PWD'),
-        )
+def get_catalog(args):
+    return Catalog(
+        args.repos / 'images' / 'catalog.json',
+        cdstar_url=os.environ.get('CDSTAR_URL', 'https://cdstar.shh.mpg.de'),
+        cdstar_user=os.environ.get('CDSTAR_USER'),
+        cdstar_pwd=os.environ.get('CDSTAR_PWD'),
+    )
 
 
 def _api(args):
@@ -38,17 +37,14 @@ def upload_mediafiles(args):
     Uploads media files from the passed directory to the CDSTAR server,
     if an object identified by metadata's 'name' exists it will be deleted first
     """
-
     supported_types = {'imagefile': ['png', 'gif', 'jpg', 'jpeg', 'tif', 'tiff'],
                        'pdffile':   ['pdf'],
                        'moviefile': ['mp4']}
 
-    with _get_catalog(args, 'mediafiles') as cat:
-
+    with get_catalog(args) as cat:
         name_map = {obj.metadata['name']: obj for obj in cat}
 
         for ifn in sorted(Path(args.args[0]).iterdir()):
-
             print(ifn.name)
 
             fmt = ifn.suffix[1:].lower()
@@ -61,20 +57,12 @@ def upload_mediafiles(args):
                 print('No supported media format - skipping {0}'.format(fmt))
                 continue
 
-            # Lookup the image name in catalog:
-            stem = ifn.stem
-            cat_obj = name_map[stem] if stem in name_map else None
-
-            # if it exists delete it
-            if cat_obj:
-                args.log.info('Delete exisiting object %s for %s' % (cat_obj.id, ifn.name))
-                cat.delete(cat_obj.id)
-
-            md = {'collection': 'amsd',
-                    'name': stem,
-                    'type': meta_type,
-                    'path': ifn.name
-                }
+            md = {
+                'collection': 'amsd',
+                'name': ifn.stem,
+                'type': meta_type,
+                'path': ifn.name
+            }
 
             # Create the new object
             for (fname, created, obj) in cat.create(str(ifn), md):
@@ -88,10 +76,7 @@ def main():  # pragma: no cover
         '--repos',
         help="path to amsd-data repository",
         type=Path,
-        default=Path(__file__).resolve().parent.parent.parent)
-    parser.add_argument('--amsd-repo',
-                        type=Path,
-                        default=Path(__file__).resolve().parent.parent.parent / 'amsd')
+        default=Path('.'))
     sys.exit(parser.main())
 
 
