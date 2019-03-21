@@ -27,10 +27,6 @@ def get_catalog(args):
     )
 
 
-def _api(args):
-    return amsd(repos=args.repos)
-
-
 @command()
 def upload_mediafiles(args):
     """
@@ -68,6 +64,11 @@ def upload_mediafiles(args):
             for (fname, created, obj) in cat.create(str(ifn), md):
                 args.log.info('{0} -> {1} object {2.id}'.format(
                     fname, 'new' if created else 'existing', obj))
+
+
+@command()
+def check(args):
+    Amsd(args.repos).validate()
 
 
 def main():  # pragma: no cover
