@@ -2,12 +2,14 @@ from clldutils.clilib import ArgumentParserWithLogging
 from clldutils.dsv import UnicodeWriter, UnicodeReader
 from collections import OrderedDict
 from pathlib import Path
+from cdstarcat import Catalog
 import csv
 import sys
 import re
-import pprint
+import os
 
-# call ... to_csv.py {PATH_TO_records.csv}
+
+# usage: python to_csv.py {PATH_TO_records.csv}
 
 # [separated table, old header, new header, split on]
 fields = [
@@ -20,9 +22,9 @@ fields = [
     [0,'Notes on date created', 'note_place_created', ''],
     [0,'Place Created', 'place_created', ''],
     [1,'Item type', 'item_type', ''],
-    [1,'Linguistic area', 'ling_area_1', r'  +'],
-    [1,'Linguistic area 2', 'ling_area_2', r'  +'],
-    [1,'Linguistic area 3', 'ling_area_3', r'  +'],
+    [1,'Linguistic area',   'ling_area_1', r'Chirila\s*:\s*(.*?)  +Austlang\s*:\s*(.*?)\s*:(.*?)  +Glottolog\s*:\s*(.*)\s*'],
+    [1,'Linguistic area 2', 'ling_area_2', r'Chirila\s*:\s*(.*?)  +Austlang\s*:\s*(.*?)\s*:(.*?)  +Glottolog\s*:\s*(.*)\s*'],
+    [1,'Linguistic area 3', 'ling_area_3', r'Chirila\s*:\s*(.*?)  +Austlang\s*:\s*(.*?)\s*:(.*?)  +Glottolog\s*:\s*(.*)\s*'],
     [0,'Notes on Linguistic area(s)', 'notes_ling_area', ''],
     [0,"Term for 'message stick' (or related) in language", 'stick_term', ''],
     [0,'Message', 'message', ''],
@@ -72,18 +74,33 @@ fields_not_in_sticks = [
 #         for item in self.items:
 #             writer.writerow(item.csv_row())
 
+def dms2dec(c):
+    deg, min, sec, dir = re.split('[°\'"]', c)
+    return round((float(deg) + float(min)/60 + float(sec)/(60*60)) * (-1 if dir.lower() in ['w', 's'] else 1), 6)
+
+def get_catalog():
+    return Catalog(
+        Path(__file__).resolve().parent.parent.parent / 'images' / 'catalog.json',
+        cdstar_url=os.environ.get('CDSTAR_URL', 'https://cdstar.shh.mpg.de'),
+        cdstar_user=os.environ.get('CDSTAR_USER'),
+        cdstar_pwd=os.environ.get('CDSTAR_PWD'),
+    )
+
 def main():
+
+    raw_path = Path(__file__).resolve().parent.parent.parent / 'raw'
+    if not raw_path.exists():
+        raw_path.mkdir()
 
     csv_dataframe = {
         'sticks': []
         ,'keywords': {} 
         ,'sem_domain': {}
         ,'linked_filenames': {}
-        ,'ling_area': {}
         ,'item_type': {}
         ,'material': {}
         ,'technique': {}
-        ,'glottolog_codes': {}
+        ,'ling_area': {}
         ,'source_citation': {}
         ,'source_type': {}
         ,'holder_file': {}
@@ -99,8 +116,8 @@ def main():
             if i_ == 0: #header
                 data.append('id') # add id
                 for j, col in enumerate(row):
-                    if fields[j][2].strip() not in fields_not_in_sticks:
-                        data.append(fields[j][2].strip())
+                    # if fields[j][2].strip() not in fields_not_in_sticks:
+                    data.append(fields[j][2].strip())
             else:
                 i = i_ - 1
                 data.append(i) # add id
@@ -112,14 +129,21 @@ def main():
                         if fields[j][2] in fields_not_in_sticks and not fields[j][2] == 'linked_filenames':
                             col = col.lower()
                         if fields[j][0] == 0:
-                            data.append(col)
+                            if fields[j][2] in ['lat', 'long']:
+                                data.append(dms2dec(col))
+                            else:
+                                data.append(col)
                         elif fields[j][0] == 1 and len(fields[j][3]) == 0:
                             if col not in csv_dataframe[fields[j][2]]:
                                 csv_dataframe[fields[j][2]][col] = len(csv_dataframe[fields[j][2]]) + 1
                             data.append(csv_dataframe[fields[j][2]][col])
                         elif fields[j][0] == 1 and len(fields[j][3]) > 1:
-                            data_array = re.split(fields[j][3], col)
                             ref_data = []
+                            if re.match(r'^ling_area_\d+$', fields[j][2]):
+                                data_array = ["|".join([i.strip() for i in list(
+                                                re.findall(fields[j][3], col)[0])])]
+                            else:
+                                data_array = re.split(fields[j][3], col)
                             for item_ in data_array:
                                 item = item_.strip()
                                 col_name = fields[j][2]
@@ -141,22 +165,40 @@ def main():
                                         csv_dataframe[dfkey] = []
                                         csv_dataframe[dfkey].append(['stick_id', col_name + '_id'])
                                     csv_dataframe[dfkey].append([i, csv_dataframe[col_name][item]])
-                            # save ids to related table as space separated lists of ids
-                            data.append(' '.join(map(str, ref_data)))
+                            # save ids to related table as semicolon separated lists of ids
+                            data.append(';'.join(map(str, ref_data)))
             csv_dataframe['sticks'].append(data)
-        pp = pprint.PrettyPrinter(indent=4)
-        pp.pprint(csv_dataframe)
+
+    with get_catalog() as cat:
+        images_oids = {obj.metadata['name']: obj.id for obj in cat}
 
     for filename, data in csv_dataframe.items():
-        with UnicodeWriter(filename + '.csv') as writer:
+        with UnicodeWriter(raw_path.joinpath(filename + '.csv')) as writer:
             if type(data) is list:
                 for item in data:
                     writer.writerow(item)
             else:
                 d = []
-                d.append(['id', 'name'])
-                for k, v in data.items():
-                    d.append([v, k])
+                if filename == 'ling_area':
+                    d.append(['id', 'chirila_name', 'austlang_code', 'austlang_name', 'glottolog_code'])
+                    for k, v in data.items():
+                        c,ac,an,g = re.split(r'\|', k)
+                        if g == 'no code':
+                            g = ''
+                        d.append([v, c, ac, an, g])
+                elif filename == 'linked_filenames':
+                    d.append(['id', 'name', 'oid'])
+                    for k, v in data.items():
+                        k_ = os.path.splitext(k)[0]
+                        if k_ in images_oids:
+                            d.append([v, k, images_oids[k_]])
+                        else:
+                            print("no image match for '%s'" % (k))
+                            d.append([v, k, ''])
+                else:
+                    d.append(['id', 'name'])
+                    for k, v in data.items():
+                        d.append([v, k])
                 for item in d:
                     writer.writerow(item)
 
