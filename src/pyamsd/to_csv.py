@@ -126,7 +126,8 @@ def main():
                         data.append('')
                     else:
                         col = col_.strip()
-                        if fields[j][2] in fields_not_in_sticks and not fields[j][2] == 'linked_filenames':
+                        if fields[j][2] in fields_not_in_sticks \
+                                and fields[j][2] not in ['linked_filenames', 'source_citation']:
                             col = col.lower()
                         if fields[j][0] == 0:
                             if fields[j][2] in ['lat', 'long']:
