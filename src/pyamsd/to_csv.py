@@ -53,7 +53,7 @@ fields = [
     [0,'URL (source document 2)', 'url_source_2', ''],
     [0,'IRN', 'irn', ''],
     [0,'Notes', 'notes', ''],
-    [1,'Data entry (OCCAMS)', 'occams', r'  +'],
+    [1,'Data entry (OCCAMS)', 'data_entry', r'  +'],
     [1,'Linked Filename', 'linked_filenames', r' *; *']
 ]
 
@@ -104,7 +104,7 @@ def main():
         ,'source_citation': {}
         ,'source_type': {}
         ,'holder_file': {}
-        ,'occams': {}
+        ,'data_entry': {}
     }
 
     with UnicodeReader(Path(sys.argv[1]), delimiter='\t') as reader:
@@ -114,7 +114,7 @@ def main():
                 exit(1)
             data = []
             if i_ == 0: #header
-                data.append('id') # add id
+                data.append('pk') # add pk
                 for j, col in enumerate(row):
                     # if fields[j][2].strip() not in fields_not_in_sticks:
                     data.append(fields[j][2].strip())
@@ -170,7 +170,7 @@ def main():
             csv_dataframe['sticks'].append(data)
 
     with get_catalog() as cat:
-        images_oids = {obj.metadata['name']: obj.id for obj in cat}
+        images_objs = {obj.metadata['name']: obj for obj in cat}
 
     for filename, data in csv_dataframe.items():
         with UnicodeWriter(raw_path.joinpath(filename + '.csv')) as writer:
@@ -180,23 +180,30 @@ def main():
             else:
                 d = []
                 if filename == 'ling_area':
-                    d.append(['id', 'chirila_name', 'austlang_code', 'austlang_name', 'glottolog_code'])
+                    d.append(['pk', 'chirila_name', 'austlang_code', 'austlang_name', 'glottolog_code'])
                     for k, v in data.items():
                         c,ac,an,g = re.split(r'\|', k)
                         if g == 'no code':
                             g = ''
                         d.append([v, c, ac, an, g])
                 elif filename == 'linked_filenames':
-                    d.append(['id', 'name', 'oid'])
+                    d.append(['pk', 'name', 'oid', 'path'])
                     for k, v in data.items():
                         k_ = os.path.splitext(k)[0]
-                        if k_ in images_oids:
-                            d.append([v, k, images_oids[k_]])
+                        if k_ in images_objs:
+                            url_path = ''
+                            for o in images_objs[k_].bitstreams:
+                                if o.id not in ['thumbnail.jpg', 'web.jpg']:
+                                    url_path = o.id
+                                    break
+                            if url_path == '':
+                                print("no path found for %s" % (k_))
+                            d.append([v, k, images_objs[k_].id, url_path])
                         else:
                             print("no image match for '%s'" % (k))
                             d.append([v, k, ''])
                 else:
-                    d.append(['id', 'name'])
+                    d.append(['pk', 'name'])
                     for k, v in data.items():
                         d.append([v, k])
                 for item in d:
