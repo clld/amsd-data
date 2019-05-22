@@ -163,7 +163,7 @@ def main():
                                     ref_data.append(csv_dataframe[col_name][item])
                                     if dfkey not in csv_dataframe: # header
                                         csv_dataframe[dfkey] = []
-                                        csv_dataframe[dfkey].append(['stick_id', col_name + '_id'])
+                                        csv_dataframe[dfkey].append(['stick_pk', col_name + '_pk'])
                                     csv_dataframe[dfkey].append([i, csv_dataframe[col_name][item]])
                             # save ids to related table as semicolon separated lists of ids
                             data.append(';'.join(map(str, ref_data)))
