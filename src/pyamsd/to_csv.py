@@ -11,7 +11,7 @@ import os
 
 # usage: python to_csv.py {PATH_TO_records.csv}
 
-# [separated table, old header, new header, split on]
+# [separated table, old header, new header, split regex]
 fields = [
     [0,'AMSD ID', 'amsd_id', ''],
     [0,'Title', 'title', ''],
@@ -108,18 +108,16 @@ def main():
     }
 
     with UnicodeReader(Path(sys.argv[1]), delimiter='\t') as reader:
-        for i_, row in enumerate(reader):
+        for i, row in enumerate(reader):
             if len(row) != 42:
                 print("Error count of columns in line " + i)
                 exit(1)
             data = []
-            if i_ == 0: #header
+            if i == 0: #header
                 data.append('pk') # add pk
                 for j, col in enumerate(row):
-                    # if fields[j][2].strip() not in fields_not_in_sticks:
                     data.append(fields[j][2].strip())
             else:
-                i = i_ - 1
                 data.append(i) # add id
                 for j, col_ in enumerate(row):
                     if re.sub(r'[ ]+', '', col_) == '':
