@@ -43,7 +43,7 @@ fields = [
     [0,'Institution/Holder: object identifier', 'holder_obj_id', ''],
     [0,'Collector', 'collector', ''],
     [0,'Place Collected', 'place_collected', ''],
-    [0,'Creator Copyright', 'creator_coyright', ''],
+    [0,'Creator Copyright', 'creator_copyright', ''],
     [0,'File Copyright', 'file_copyright', ''],
     [0,'Latitude', 'lat', ''],
     [0,'Longitude', 'long', ''],
