@@ -159,11 +159,12 @@ def main():
                                     dfkey = 'x_sticks_' + col_name
                                     if item not in csv_dataframe[col_name]:
                                         csv_dataframe[col_name][item] = len(csv_dataframe[col_name]) + 1
-                                    ref_data.append(csv_dataframe[col_name][item])
-                                    if dfkey not in csv_dataframe: # header
-                                        csv_dataframe[dfkey] = []
-                                        csv_dataframe[dfkey].append(['stick_pk', col_name + '_pk'])
-                                    csv_dataframe[dfkey].append([i, csv_dataframe[col_name][item]])
+                                    if not csv_dataframe[col_name][item] in ref_data:
+                                        ref_data.append(csv_dataframe[col_name][item])
+                                        if dfkey not in csv_dataframe: # header
+                                            csv_dataframe[dfkey] = []
+                                            csv_dataframe[dfkey].append(['stick_pk', col_name + '_pk'])
+                                        csv_dataframe[dfkey].append([i, csv_dataframe[col_name][item]])
                             # save ids to related table as semicolon separated lists of ids
                             data.append(';'.join(map(str, ref_data)))
             csv_dataframe['sticks'].append(data)
