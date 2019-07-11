@@ -9,7 +9,7 @@ import re
 import os
 
 
-# usage: python to_csv.py {PATH_TO_records.csv}
+# usage: python ./to_csv.py
 
 # [separated table, old header, new header, split regex]
 fields = [
@@ -68,11 +68,22 @@ fields_not_in_sticks = [
     'source_citation'
 ]
 
-# def write(self):
-#     with dsv.UnicodeWriter(self.path) as writer:
-#         writer.writerow(self.header)
-#         for item in self.items:
-#             writer.writerow(item.csv_row())
+def sim(s, t):
+        if s == t: return 0
+        elif len(s) == 0: return len(t)
+        elif len(t) == 0: return len(s)
+        v0 = [None] * (len(t) + 1)
+        v1 = [None] * (len(t) + 1)
+        for i in range(len(v0)):
+            v0[i] = i
+        for i in range(len(s)):
+            v1[0] = i + 1
+            for j in range(len(t)):
+                cost = 0 if s[i] == t[j] else 1
+                v1[j + 1] = min(v1[j] + 1, v0[j + 1] + 1, v0[j] + cost)
+            for j in range(len(v0)):
+                v0[j] = v1[j]
+        return v1[len(t)]
 
 def dms2dec(c):
     deg, min, sec, dir = re.split('[°\'"]', c)
@@ -107,11 +118,12 @@ def main():
         ,'data_entry': {}
     }
 
-    with UnicodeReader(Path(sys.argv[1]), delimiter='\t') as reader:
-        for i, row in enumerate(reader):
+    datafile = Path(__file__).resolve().parent.parent.parent / 'org_data' / 'records.tsv'
+
+    with UnicodeReader(datafile, delimiter='\t') as reader:
+        for i, row in enumerate(reader): 
             if len(row) != 42:
-                print("Error count of columns in line " + i)
-                exit(1)
+                print("Error: count of columns in line %i is %i NOT 42" % (i+1, len(row)))
             data = []
             if i == 0: #header
                 data.append('pk') # add pk
@@ -120,6 +132,9 @@ def main():
             else:
                 data.append(i) # add id
                 for j, col_ in enumerate(row):
+                    if j>41 and len(col_):
+                        print('Error: too many filled columns for line %i' % (i+1))
+                        continue
                     if re.sub(r'[ ]+', '', col_) == '':
                         data.append('')
                     else:
@@ -129,7 +144,11 @@ def main():
                             col = col.lower()
                         if fields[j][0] == 0:
                             if fields[j][2] in ['lat', 'long']:
-                                data.append(dms2dec(col))
+                                try:
+                                    data.append(dms2dec(col))
+                                except:
+                                    print('Error: check lat/long notation in line %i for "%s"' % (i+1, col))
+                                    data.append(col)
                             else:
                                 data.append(col)
                         elif fields[j][0] == 1 and len(fields[j][3]) == 0:
@@ -139,8 +158,12 @@ def main():
                         elif fields[j][0] == 1 and len(fields[j][3]) > 1:
                             ref_data = []
                             if re.match(r'^ling_area_\d+$', fields[j][2]):
-                                data_array = ["|".join([i.strip() for i in list(
+                                try:
+                                    data_array = ["|".join([i.strip() for i in list(
                                                 re.findall(fields[j][3], col)[0])])]
+                                except:
+                                    print('Error: %s in line %i has wrong structure: %s' % (fields[j][2], i+1, col))
+                                    data_array = []
                             else:
                                 data_array = re.split(fields[j][3], col)
                             for item_ in data_array:
@@ -171,6 +194,14 @@ def main():
 
     with get_catalog() as cat:
         images_objs = {obj.metadata['name']: obj for obj in cat}
+
+    # look for similar entries
+    for t,k in [('source_citation',5), ('holder_file',4), ('ling_area',10), ('material',1)]:
+        check_sim = list(csv_dataframe[t].keys())
+        for i in range(len(check_sim)):
+            for j in range(i+1, len(check_sim)):
+                if sim(check_sim[i], check_sim[j]) < k:
+                    print('sim check: %s\n%s\n%s\n' % (t, check_sim[i], check_sim[j]))
 
     for filename, data in csv_dataframe.items():
         with UnicodeWriter(raw_path.joinpath(filename + '.csv')) as writer:
