@@ -37,6 +37,10 @@ def upload_mediafiles(args):
                        'pdffile':   ['pdf'],
                        'moviefile': ['mp4']}
 
+    if not args.args or not Path(args.args[0]).exists():
+        print("Error: Upload path does not exist")
+        exit(1)
+
     with get_catalog(args) as cat:
         name_map = {obj.metadata['name']: obj for obj in cat}
 
@@ -77,7 +81,7 @@ def main():  # pragma: no cover
         '--repos',
         help="path to amsd-data repository",
         type=Path,
-        default=Path('.'))
+        default=Path(__file__).resolve().parent.parent.parent)
     sys.exit(parser.main())
 
 
