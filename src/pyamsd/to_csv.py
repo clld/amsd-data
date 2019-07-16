@@ -127,8 +127,6 @@ def to_csv(args):
 
     with UnicodeReader(datafile, delimiter='\t') as reader:
         for i, row in enumerate(reader): 
-            if len(row) != 42:
-                print("Error: count of columns in line %i is %i NOT 42" % (i+1, len(row)))
             data = []
             if i == 0: #header
                 data.append('pk') # add pk
