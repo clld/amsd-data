@@ -209,7 +209,6 @@ def to_csv(args):
                     print('sim check: %s\n%s\n%s\n' % (t, check_sim[i], check_sim[j]))
 
     if not args.args or args.args[0].lower() != 'check':
-        print('write')
         for filename, data in csv_dataframe.items():
             with UnicodeWriter(raw_path.joinpath(filename + '.csv')) as writer:
                 if type(data) is list:
