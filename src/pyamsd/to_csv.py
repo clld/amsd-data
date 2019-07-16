@@ -1,4 +1,4 @@
-from clldutils.clilib import ArgumentParserWithLogging
+from clldutils.clilib import ArgumentParserWithLogging, command
 from clldutils.dsv import UnicodeWriter, UnicodeReader
 from collections import OrderedDict
 from pathlib import Path
@@ -8,8 +8,6 @@ import sys
 import re
 import os
 
-
-# usage: python ./to_csv.py
 
 # [separated table, old header, new header, split regex]
 fields = [
@@ -97,7 +95,14 @@ def get_catalog():
         cdstar_pwd=os.environ.get('CDSTAR_PWD'),
     )
 
-def main():
+@command()
+def to_csv(args):
+    """
+    Parses data file 'org_data/records.tsv' into single csv files into 'raw'.
+    In addition it outputs given warnings while parsing. If you only want to check
+    the data integrity of data file 'org_data/records.tsv' then pass the argument
+    'check' -> amsd to_csv check.
+    """
 
     raw_path = Path(__file__).resolve().parent.parent.parent / 'raw'
     if not raw_path.exists():
@@ -203,44 +208,42 @@ def main():
                 if sim(check_sim[i], check_sim[j]) < k:
                     print('sim check: %s\n%s\n%s\n' % (t, check_sim[i], check_sim[j]))
 
-    for filename, data in csv_dataframe.items():
-        with UnicodeWriter(raw_path.joinpath(filename + '.csv')) as writer:
-            if type(data) is list:
-                for item in data:
-                    writer.writerow(item)
-            else:
-                d = []
-                if filename == 'ling_area':
-                    d.append(['pk', 'chirila_name', 'austlang_code', 'austlang_name', 'glottolog_code'])
-                    for k, v in data.items():
-                        c,ac,an,g = re.split(r'\|', k)
-                        if g == 'no code':
-                            g = ''
-                        d.append([v, c, ac, an, g])
-                elif filename == 'linked_filenames':
-                    d.append(['pk', 'name', 'oid', 'path'])
-                    for k, v in data.items():
-                        k_ = os.path.splitext(k)[0]
-                        if k_ in images_objs:
-                            url_path = ''
-                            for o in images_objs[k_].bitstreams:
-                                if o.id not in ['thumbnail.jpg', 'web.jpg']:
-                                    url_path = o.id
-                                    break
-                            if url_path == '':
-                                print("no path found for %s" % (k_))
-                            d.append([v, k, images_objs[k_].id, url_path])
-                        else:
-                            print("no image match for '%s'" % (k))
-                            d.append([v, k, ''])
+    if not args.args or args.args[0].lower() != 'check':
+        print('write')
+        for filename, data in csv_dataframe.items():
+            with UnicodeWriter(raw_path.joinpath(filename + '.csv')) as writer:
+                if type(data) is list:
+                    for item in data:
+                        writer.writerow(item)
                 else:
-                    d.append(['pk', 'name'])
-                    for k, v in data.items():
-                        d.append([v, k])
-                for item in d:
-                    writer.writerow(item)
-
-
-if __name__ == '__main__':
-    main()
+                    d = []
+                    if filename == 'ling_area':
+                        d.append(['pk', 'chirila_name', 'austlang_code', 'austlang_name', 'glottolog_code'])
+                        for k, v in data.items():
+                            c,ac,an,g = re.split(r'\|', k)
+                            if g == 'no code':
+                                g = ''
+                            d.append([v, c, ac, an, g])
+                    elif filename == 'linked_filenames':
+                        d.append(['pk', 'name', 'oid', 'path'])
+                        for k, v in data.items():
+                            k_ = os.path.splitext(k)[0]
+                            if k_ in images_objs:
+                                url_path = ''
+                                for o in images_objs[k_].bitstreams:
+                                    if o.id not in ['thumbnail.jpg', 'web.jpg']:
+                                        url_path = o.id
+                                        break
+                                if url_path == '':
+                                    print("no path found for %s" % (k_))
+                                d.append([v, k, images_objs[k_].id, url_path])
+                            else:
+                                print("no image match for '%s'" % (k))
+                                d.append([v, k, ''])
+                    else:
+                        d.append(['pk', 'name'])
+                        for k, v in data.items():
+                            d.append([v, k])
+                    for item in d:
+                        writer.writerow(item)
 

@@ -17,6 +17,7 @@ from cdstarcat import Catalog, Object
 
 from pyamsd.api import Amsd
 
+from .to_csv import to_csv
 
 def get_catalog(args):
     return Catalog(
