@@ -1,16 +1,17 @@
 pk,name
-1,journal article
-2,book chapter
-3,museum collection
-4,book article
+1,book article
+2,journal article
+3,book chapter
+4,museum collection
 5,article
 6,text source
 7,book
 8,newspaper article
-9,"sale item, ebay"
-10,private sale
-11,"sale item, lawsons auctioneers"
-12,"sale item, www.carters.com.au"
-13,archive
-14,cultural institution
-15,book source
+9,unpublished manuscript
+10,"sale item, ebay"
+11,private sale
+12,"sale item, lawsons auctioneers"
+13,"sale item, www.carters.com.au"
+14,archive
+15,cultural institution
+16,book source
