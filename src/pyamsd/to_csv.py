@@ -85,7 +85,7 @@ def sim(s, t):
 
 def dms2dec(c):
     deg, min, sec, dir = re.split('[°\'"]', c)
-    return round((float(deg) + float(min)/60 + float(sec)/(60*60)) * (-1 if dir.lower() in ['w', 's'] else 1), 6)
+    return round((float(deg) + float(min)/60 + float(sec)/(60*60)) * (-1 if dir.strip().lower() in ['w', 's'] else 1), 6)
 
 def get_catalog():
     return Catalog(
