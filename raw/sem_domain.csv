@@ -136,3 +136,16 @@ pk,name
 135,sd_event
 136,sd_place_hills
 137,sd_request_alliance
+138,purpose_response
+139,purpose_request
+140,sd_activity_marriage
+141,sd_person_man_son
+142,sd_person_man_father
+143,sd_person_female_girl
+144,sd_item_tobacco
+145,purpose_news
+146,sd_activity_ceremony
+147,sd_place_arnhembay
+148,sd_place_yirrkala
+149,sd_injury
+150,sd_item_djudapole
