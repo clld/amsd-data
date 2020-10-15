@@ -19,6 +19,7 @@ from pyamsd.api import Amsd
 
 from .to_csv import to_csv
 
+
 def get_catalog(args):
     return Catalog(
         args.repos / 'images' / 'catalog.json',
@@ -35,7 +36,7 @@ def upload_mediafiles(args):
     if an object identified by metadata's 'name' exists it will be deleted first
     """
     supported_types = {'imagefile': ['png', 'gif', 'jpg', 'jpeg', 'tif', 'tiff'],
-                       'pdffile':   ['pdf'],
+                       'pdffile': ['pdf'],
                        'moviefile': ['mp4']}
 
     if not args.args or not Path(args.args[0]).exists():
