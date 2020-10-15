@@ -12,6 +12,8 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
     ],
     author='Robert Forkel',
     author_email='forkel@shh.mpg.de',
@@ -25,10 +27,10 @@ setup(
     python_requires='>=3.5',
     install_requires=[
         'tqdm',
-        'clldutils',
+        'clldutils>=3.5.4',
         'cdstarcat>=0.6',
         'attrs',
-        'pycldf>=1.0.6',
+        'pycldf>=1.15.2',
         'sqlalchemy',
     ],
     extras_require={
