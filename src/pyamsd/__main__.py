@@ -12,7 +12,7 @@ from itertools import groupby
 from tqdm import tqdm
 from clldutils.clilib import ArgumentParserWithLogging, command
 from csvw.dsv import UnicodeWriter
-from clldutils.path import md5, write_text, as_unicode
+from clldutils.path import md5, write_text
 from cdstarcat import Catalog, Object
 
 from pyamsd.api import Amsd
@@ -61,9 +61,9 @@ def upload_mediafiles(args):
 
             md = {
                 'collection': 'amsd',
-                'name': as_unicode(ifn.stem),
+                'name': str(ifn.stem),
                 'type': meta_type,
-                'path': as_unicode(ifn.name)
+                'path': str(ifn.name)
             }
 
             # Create the new object
