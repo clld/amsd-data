@@ -1,6 +1,6 @@
 from clldutils.clilib import ArgumentParserWithLogging, command
 from csvw.dsv import UnicodeWriter, UnicodeReader
-from collections import OrderedDict
+from collections import OrderedDict, defaultdict
 from pathlib import Path
 from cdstarcat import Catalog
 import csv
@@ -220,6 +220,15 @@ def to_csv(args):
             for j in range(i + 1, len(check_sim)):
                 if sim(check_sim[i], check_sim[j]) < k:
                     print('sim check: %s\n%s\n%s\n' % (t, check_sim[i], check_sim[j]))
+
+    # look for unique AMSD IDs
+    unique_ids_check = defaultdict(int)
+    for s in csv_dataframe['sticks']:
+        if s[1].strip():
+            unique_ids_check[s[1]] += 1
+    for k, v in unique_ids_check.items():
+        if v > 1:
+            print('AMSD ID check: {0} occurs {1} times'.format(k, v))
 
     if not args.args or args.args[0].lower() != 'check':
         for filename, data in csv_dataframe.items():
