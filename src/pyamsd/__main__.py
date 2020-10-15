@@ -33,7 +33,7 @@ def get_catalog(args):
 def upload_mediafiles(args):
     """
     Uploads media files from the passed directory to the CDSTAR server,
-    if an object identified by metadata's 'name' exists it will be deleted first
+    if an object identified by metadata's 'name' exists it will be deleted first.
     """
     supported_types = {'imagefile': ['png', 'gif', 'jpg', 'jpeg', 'tif', 'tiff'],
                        'pdffile': ['pdf'],
@@ -73,8 +73,25 @@ def upload_mediafiles(args):
 
 
 @command()
-def check(args):
+def check_mediafiles(args):
+    """
+    Prints out missing media files which are listed in org_data/records.tsv
+    but not found in the media catalog (images/catalog.json).
+    """
     Amsd(args.repos).validate()
+
+
+@command()
+def copy_missing_mediafiles_from(args):
+    """
+    Copies missing media files which are listed in org_data/records.tsv
+    from the passed path to mediafiles/upload.
+    Example: amsd copy_missing_mediafiles_from ~/Downloads/Message_sticks_images_all
+    """
+    if not args.args or not Path(args.args[0]).resolve().exists():
+        print("Error: Source path for copying does not exist")
+        exit(1)
+    Amsd(args.repos).validate(Path(args.args[0]).resolve())
 
 
 def main():  # pragma: no cover
