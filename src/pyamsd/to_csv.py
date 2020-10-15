@@ -165,7 +165,7 @@ def to_csv(args):
                                 except ValueError:
                                     print('Error: check lat/long notation in line {0} for "{1}"'.format(
                                         i + 1, col))
-                                    data.append(col)
+                                    data.append(None)
                             else:
                                 data.append(col)
                         elif fields[j][0] == 1 and len(fields[j][3]) == 0:
@@ -179,7 +179,7 @@ def to_csv(args):
                                     data_array = ["|".join([i.strip() for i in list(
                                         re.findall(fields[j][3], col)[0])])]
                                 except IndexError:
-                                    print('Error: {0} in line %i has wrong structure: {1}'.format(
+                                    print('Error: {0} in line {1} has wrong structure: {2}'.format(
                                         fields[j][2], i + 1, col))
                                     data_array = []
                             else:
