@@ -1,5 +1,5 @@
 from clldutils.clilib import ArgumentParserWithLogging, command
-from clldutils.dsv import UnicodeWriter, UnicodeReader
+from csvw.dsv import UnicodeWriter, UnicodeReader
 from collections import OrderedDict
 from pathlib import Path
 from cdstarcat import Catalog
@@ -20,6 +20,8 @@ fields = [
     [0,'Notes on date created', 'note_place_created', ''],
     [0,'Place Created', 'place_created', ''],
     [1,'Item type', 'item_type', ''],
+    [1,'Subtype', 'item_subtype', ''],
+    [1,'Cultural region', 'cultural_region', ''],
     [1,'Linguistic area',   'ling_area_1', r'Chirila\s*:\s*(.*?)  +Austlang\s*:\s*(.*?)\s*:(.*?)  +Glottolog\s*:\s*(.*)\s*'],
     [1,'Linguistic area 2', 'ling_area_2', r'Chirila\s*:\s*(.*?)  +Austlang\s*:\s*(.*?)\s*:(.*?)  +Glottolog\s*:\s*(.*)\s*'],
     [1,'Linguistic area 3', 'ling_area_3', r'Chirila\s*:\s*(.*?)  +Austlang\s*:\s*(.*?)\s*:(.*?)  +Glottolog\s*:\s*(.*)\s*'],
@@ -114,6 +116,8 @@ def to_csv(args):
         ,'sem_domain': {}
         ,'linked_filenames': {}
         ,'item_type': {}
+        ,'item_subtype': {}
+        ,'cultural_region': {}
         ,'material': {}
         ,'technique': {}
         ,'ling_area': {}
@@ -135,7 +139,7 @@ def to_csv(args):
             else:
                 data.append(i) # add id
                 for j, col_ in enumerate(row):
-                    if j>41 and len(col_):
+                    if j>43 and len(col_):
                         print('Error: too many filled columns for line %i' % (i+1))
                         continue
                     if re.sub(r'[ ]+', '', col_) == '':

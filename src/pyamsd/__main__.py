@@ -11,7 +11,7 @@ from itertools import groupby
 
 from tqdm import tqdm
 from clldutils.clilib import ArgumentParserWithLogging, command
-from clldutils.dsv import UnicodeWriter
+from csvw.dsv import UnicodeWriter
 from clldutils.path import md5, write_text, as_unicode
 from cdstarcat import Catalog, Object
 
