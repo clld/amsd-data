@@ -19,11 +19,12 @@ class Amsd(API):
         missing = collections.Counter()
 
         for row in self.rows:
-            for name in row['Linked Filename'].split(';'):
-                name = name.strip()
-                if name:
-                    if name not in media:
-                        missing.update([name])
+            if row['Linked Filename']:
+                for name in row['Linked Filename'].split(';'):
+                    name = name.strip()
+                    if name:
+                        if name not in media:
+                            missing.update([name])
         for i, (k, v) in enumerate(sorted(missing.items(), key=lambda i: (-i[1], i[0]))):
             if i == 0:
                 print('Missing files:')
