@@ -214,7 +214,8 @@ def to_csv(args):
         images_objs = {obj.metadata['name']: obj for obj in cat}
 
     # look for similar entries
-    for t, k in [('source_citation', 5), ('holder_file', 4), ('ling_area', 10), ('material', 1)]:
+    for t, k in [('source_citation', 5), ('holder_file', 4), ('ling_area', 10), ('material', 1),
+                 ('data_entry', 2), ('item_type', 2), ('item_subtype', 2), ('cultural_region', 2)]:
         check_sim = list(csv_dataframe[t].keys())
         for i in range(len(check_sim)):
             for j in range(i + 1, len(check_sim)):
