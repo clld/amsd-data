@@ -1,0 +1,32 @@
+pk,name
+1,unlocalisable
+2,Victoria
+3,Queensland
+4,South Australia
+5,NSW
+6,QLD
+7,QLD_unlocalisable
+8,TopEnd
+9,NT
+10,SA
+11,VIC
+12,NT_CA
+13,SA_unlocalisable
+14,TopEnd_tiwi
+15,WA_kimberley
+16,NT_CA_unlocalisable
+17,TopEnd_arnhem_east
+18,TopEnd_tiwi_melville
+19,TopEnd_arnhem
+20,TopEnd_cobourg
+21,WA_unlocalisable
+22,WA
+23,TopEnd_arnhem_west
+24,TopEnd_groote
+25,TopEnd_arnhem_unlocalisable
+26,TopEnd_arnhem_east_unlocalisable
+27,WA_Pilbara
+28,Pilbara
+29,TopEnd_arnhem_west_unlocalisable
+30,TopEnd_Arnhem_west
+31,TopEnd_groote  TopEnd_arnhem_east
