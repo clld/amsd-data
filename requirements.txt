@@ -1,2 +1,1 @@
-# development environment: install in development mode
--e .[dev,test]
+pyamsd>=1.0
