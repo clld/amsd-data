@@ -6,10 +6,16 @@ pk,name
 5,message stick accessory
 6,message stick in a video
 7,message stick from a private sale
-8,lexical item
-9,image of a message stick and messenger
-10,negative text reference
-11,message stick
-12,message stick in a private collection
+8,message stick in a public record (artefact missing)
+9,message stick in a private collection
+10,lexical item
+11,image of a message stick and messenger
+12,negative text reference
 13,message stick from private sale
 14,image of a message stick
+15,message stick in a museum collection
+16,terminus ante quem (c. 1901–1902)
+17,message stick found in situ
+18,traditional_context
+19,messages stick in a colletion
+20,message stick in a text

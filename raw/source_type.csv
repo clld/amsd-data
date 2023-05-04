@@ -1,11 +1,11 @@
 pk,name
-1,book article
+1,book
 2,journal article
 3,book chapter
 4,museum collection
-5,article
-6,text source
-7,book
+5,book article
+6,article
+7,text source
 8,newspaper article
 9,unpublished manuscript
 10,"sale item, ebay"

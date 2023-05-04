@@ -1,37 +1,48 @@
 pk,name
 1,wood plant
 2,cotton yarn plant
-3,kaolin clay
-4,pigment
-5,ironbark
-6,white gum
-7,pine wood
-8,bean-tree wood
-9,wood
-10,"wood (""grey"" gum)"
-11,leichhardt pine wood
-12,animal fur skin
-13,string
-14,bark
-15,fibre string
-16,resin
-17,feather
-18,rope
-19,soil
-20,wattle wood (?)
-21,mimosa wood (?)
-22,emu fat
-23,charcoal
-24,corkwood
-25,ochre
-26,bamboo
-27,sandalwood
-28,hardwood
-29,brown wood
-30,bone
-31,plant fiber
-32,gum
-33,animal dung
-34,textile
-35,ana-jalhout
-36,wood (ana-jal)
+3,string binding
+4,kaolin clay
+5,pigment
+6,mathews 1897
+7,"p293: ""the message-stick here represented is made of the wood of the cuttibundi tree"
+8,known to white men as quinine or peruvian bark. its length is six inches and an eighth
+9,its breadth a little over three inches
+10,"and its thickness slightly exceeding three-eighths of an inch."""
+11,ironbark
+12,white gum
+13,pine wood
+14,bean-tree wood
+15,wood
+16,"wood (""grey"" gum)"
+17,leichhardt pine wood
+18,animal fur skin
+19,string
+20,bark
+21,fibre string
+22,resin
+23,feather
+24,rope
+25,soil
+26,wattle wood (?)
+27,mimosa wood (?)
+28,emu fat
+29,charcoal
+30,corkwood
+31,ochre
+32,bamboo
+33,sandalwood
+34,hardwood
+35,brown wood
+36,bone
+37,plant fiber
+38,gum
+39,animal dung
+40,textile
+41,ana-jalhout
+42,wood (ana-jal)
+43,paint
+44,wattle
+45,wood. ochre pigment
+46,mungal wood
+47,soft wood
