@@ -83,59 +83,65 @@ pk,chirila_name,austlang_code,austlang_name,glottolog_code
 82,Flinders Island,Y67,Flinders Island language,flin1247
 83,Djinang,N94.1,Djinang,djin1253
 84,Ganalbingu,N83,Ganhalpuyngu,gana1269
-85,Adnyamathanha,L55,Wailpi,adny1235
-86,Yankunytjatjara,C4,Yankunytjatjara,yank1247
-87,Maung,N64,Mawng,maun1240
-88,Konbudj,N224,Gonbudj,
-89,Ganggalinda,G37,Yangkaal,nyan1300
-90,Kukatja,A68,Kukatja,kuka1246
-91,Pitjantjatjara,C6,Pitjantjatjara,pitj1243
-92,Wik Ngatharr,Y56,Wik Ngathanya,wikn1245
+85,Yankunytjatjara,C4,Yankunytjatjara,yank1247
+86,Maung,N64,Mawng,maun1240
+87,Konbudj,N224,Gonbudj,
+88,Ganggalinda,G37,Yangkaal,nyan1300
+89,Kukatja,A68,Kukatja,kuka1246
+90,Pitjantjatjara,C6,Pitjantjatjara,pitj1243
+91,Wik Ngatharr,Y56,Wik Ngathanya,wikn1245
+92,Adnyamathanha,L55,Wailpi,adny1235
 93,Parnkala,L6,Barngarla,bang1339
 94,Yolngu,N230,YOLNGU MATHA,yuul1239
-95,Tjupany,A31,Tjupan,
-96,Yuru,E62,Yuru,yuru1264
-97,Guugu-Yimidhirr,Y82,GUUGU YIMIDHIRR,gugu1255
-98,Wangkathaa,A12,Wangkatha,
-99,Yolngu,N117.1,Murngin,yuul1239
-100,Yingkarta,W19,Yingkarta,ying1247
-101,Miwa,K44,Miwa,miwa1242
-102,Wakaya,C16,Wakaya,waga1260
-103,Karuwali,L35,Karuwali,karr1236
-104,Ngandi,N90,Ngandi,ngan1295
-105,Arakwal,E13,Arakwal,arak1254
-106,Nyamal,A58,Nyamal,nyam1271
-107,Wubuy,N128,Wubuy / Nunggubuyu,nung1290
-108,Wik Mungkan,Y57,Wik Mungkan,wikm1247
-109,Yangman,N68,Yangman,yang1288
-110,Djapu,N145,Djapu,djap1238
-111,Gunwinggu,N70,Kune,gune1238
-112,Wunambal,K22,Wunambal,wuna1249
-113,Nulit,S91,Nulit,
-114,Kurnai,S68,GUNAI / KURNAI,gana1278
-115,Muk-Thang,S45,Brabalung,
-116,Thangguai,S48,Krauatungalang,
-117,Bidhawal,S49,Bidawal,gana1268
-118,Malak Malak,N22,Malak Malak,mull1237
-119,Yanyuwa,N153,Yanyuwa,yany1243
-120,Ngaanyatjarra,A38,Ngaanyatjarra,ngaa1240
-121,Warrwa,K10,Warrwa,warr1258
-122,Karajarri,A64,Karajarri,kara1476
-123,Burarra,N82,Burarra,bura1267
-124,Gunibidji,N74,Ndjebbana,djee1236
-125,Gunwinggu,N65,Kunwinjku,guma1252
-126,Iwaidja,N39,Iwaidja,iwai1244
-127,Duungidjawu,E20,Duungidjawu,duun1241
-128,Ngangikurunggurr,N157,NGAN'GI,nang1259
-129,no code,N161,Marri Tjevin,mari1421
-130,Ngunawal,D3,Ngunawal / Ngunnawal,ngun1277
-131,Nyungar,W41,NOONGAR / NYOONGAR,nyun1247
-132,Eora,S61,Eora,
-133,Muruwari,D32,MURUWARI,muru1266
-134,Yuat,W11,Yuat,
-135,Mara,N112,Marra,mara1385
-136,Alawa,N92,Alawa,alaw1244
-137,Bachamal,N31,Batjamalh,
-138,Warrnambool,S20,Dhauwurd Wurrung^,gund1249
-139,Djabwurung,S26,Djab Wurrung^,djab1234
-140,Wangkumara,L25,Wangkumara,wong1246
+95,Nyungar,W41,NOONGAR / NYOONGAR,nyun1247
+96,Gunwinggu,N173,Kuninjku,mura1269
+97,Tjupany,A31,Tjupan,
+98,Yuru,E62,Yuru,yuru1264
+99,Guugu-Yimidhirr,Y82,GUUGU YIMIDHIRR,gugu1255
+100,Wangkathaa,A12,Wangkatha,
+101,Yolngu,N117.1,Murngin,yuul1239
+102,Yingkarta,W19,Yingkarta,ying1247
+103,Miwa,K44,Miwa,miwa1242
+104,Wakaya,C16,Wakaya,waga1260
+105,Karuwali,L35,Karuwali,karr1236
+106,Ngandi,N90,Ngandi,ngan1295
+107,Gureng Gureng,E32,GOORENG GOORENG,gure1255
+108,Warluwarra,G10,Warluwarra^,warl1256
+109,Arakwal,E13,Arakwal,arak1254
+110,Nyamal,A58,Nyamal,nyam1271
+111,Wubuy,N128,Wubuy / Nunggubuyu,nung1290
+112,Wik Mungkan,Y57,Wik Mungkan,wikm1247
+113,Yangman,N68,Yangman,yang1288
+114,Djapu,N145,Djapu,djap1238
+115,Gunwinggu,N70,Kune,gune1238
+116,Wunambal,K22,Wunambal,wuna1249
+117,Nulit,S91,Nulit,
+118,Kurnai,S68,GUNAI / KURNAI,gana1278
+119,Muk-Thang,S45,Brabalung,
+120,Thangguai,S48,Krauatungalang,
+121,Bidhawal,S49,Bidawal,gana1268
+122,Malak Malak,N22,Malak Malak,mull1237
+123,Yanyuwa,N153,Yanyuwa,yany1243
+124,Ngaanyatjarra,A38,Ngaanyatjarra,ngaa1240
+125,Warrwa,K10,Warrwa,warr1258
+126,Karajarri,A64,Karajarri,kara1476
+127,Burarra,N82,Burarra,bura1267
+128,Gunibidji,N74,Ndjebbana,djee1236
+129,Gunwinggu,N65,Kunwinjku,guma1252
+130,Iwaidja,N39,Iwaidja,iwai1244
+131,Duungidjawu,E20,Duungidjawu,duun1241
+132,Ngangikurunggurr,N157,NGAN'GI,nang1259
+133,no code,N161,Marri Tjevin,mari1421
+134,Ngunawal,D3,Ngunawal / Ngunnawal,ngun1277
+135,Eora,S61,Eora,
+136,Muruwari,D32,MURUWARI,muru1266
+137,Guwar,E26,Guwar,guwa1244
+138,Yuat,W11,Yuat,
+139,Mara,N112,Marra,mara1385
+140,Alawa,N92,Alawa,alaw1244
+141,Bachamal,N31,Batjamalh,
+142,Warrnambool,S20,Dhauwurd Wurrung^,gund1249
+143,Djabwurung,S26,Djab Wurrung^,djab1234
+144,Wangkumara,L25,Wangkumara,wong1246
+145,Yuin,S67,Yuin,yuin1242
+146,Diyari,L17,Dieri,dier1241

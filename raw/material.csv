@@ -20,29 +20,50 @@ pk,name
 19,string
 20,bark
 21,fibre string
-22,resin
-23,feather
-24,rope
-25,soil
-26,wattle wood (?)
-27,mimosa wood (?)
-28,emu fat
-29,charcoal
-30,corkwood
-31,ochre
-32,bamboo
-33,sandalwood
-34,hardwood
-35,brown wood
-36,bone
-37,plant fiber
-38,gum
-39,animal dung
-40,textile
-41,ana-jalhout
-42,wood (ana-jal)
-43,paint
-44,wattle
-45,wood. ochre pigment
-46,mungal wood
-47,soft wood
+22,resin - non specific
+23,resin
+24,feather
+25,rope
+26,ochre
+27,wattle wood (?)
+28,mimosa wood (?)
+29,emu fat
+30,charcoal
+31,corkwood
+32,soil
+33,bamboo
+34,sandalwood
+35,hardwood
+36,brown wood
+37,bone
+38,plant fiber
+39,gum
+40,animal dung
+41,textile
+42,ana-jalhout
+43,wood (ana-jal)
+44,paint
+45,wattle
+46,paper
+47,ink
+48,ochre pigment
+49,mungal wood
+50,soft wood
+51,carved wood
+52,feathers
+53,ochres on ironwood
+54,ochres on wood
+55,plant fibre string
+56,fibre cords
+57,ochres
+58,ink on wood
+59,wood with color
+60,with color
+61,adhesive - non specific
+62,red pigment
+63,reddish-brown iron wood
+64,wood; pigment
+65,"bamboo (according to the accession registers: ""prior material: wood"")"
+66,wood; resin
+67,wood; pigment; rockets blue
+68,wood; pigment; stone; resin

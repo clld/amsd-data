@@ -1,33 +1,34 @@
 pk,name
-1,QLD
-2,Victoria
-3,Queensland
-4,South Australia
-5,NSW
-6,QLD_unlocalisable
-7,TopEnd
-8,NT
-9,SA
-10,VIC
-11,NT_CA
-12,SA_unlocalisable
-13,TopEnd_tiwi
-14,WA_kimberley
-15,NT_CA_unlocalisable
-16,unlocalisable
-17,TopEnd_arnhem_east
-18,TopEnd_tiwi_melville
-19,TopEnd_arnhem
-20,TopEnd_cobourg
-21,WA_unlocalisable
-22,WA
-23,TopEnd_arnhem_west
-24,TopEnd_groote
-25,TopEnd_arnhem_unlocalisable
-26,TopEnd_arnhem_east_unlocalisable
-27,WA_Pilbara
-28,Pilbara
-29,TopEnd_arnhem_west_unlocalisable
-30,TopEnd_groote  TopEnd_arnhem_east
-31,Central Australia
-32,Central Australia/ western desert
+1,Queensland
+2,QLD/NSW
+3,TopEnd
+4,nt_ca
+5,TopEnd_tiwi
+6,WA_kimberley
+7,NT_CA_unlocalisable
+8,unlocalisable
+9,TopEnd_arnhem_east
+10,TopEnd_tiwi_melville
+11,TopEnd_arnhem
+12,Production ethnic group:  Yirandali (aka Dalleburra)
+13,"TopEnd  Yangman - Also known as"" Yangman; Yungman; Yungmun; Yung-munni; Yungmanni; Yungmunee; Yungmunnee; Jongmanungman  Scope note ""An Australian Aboriginal language group from the Roper and Victoria River districts, Northern Territory."""
+14,TopEnd_cobourg
+15,NT_CA
+16,WA_unlocalisable
+17,TopEnd_arnhem_west
+18,TopEnd_groote
+19,TopEnd_arnhem_unlocalisable
+20,TopEnd_arnhem_east_unlocalisable
+21,WA_Pilbara
+22,Victoria
+23,Pilbara
+24,TopEnd_arnhem_west_unlocalisable
+25,TopEnd_groote  TopEnd_arnhem_east
+26,wa_kimberley
+27,Central Australia
+28,Central Australia/ western desert
+29,Warieya
+30,Buduna
+31,Binigura
+32,Thalanyi [Talainji]
+33,Wajeri
