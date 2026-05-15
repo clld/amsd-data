@@ -3,79 +3,87 @@ pk,name
 2,cotton yarn plant
 3,string binding
 4,kaolin clay
-5,pigment
-6,cuttibundi
-7,quinine
-8,peruvian bark
-9,ironbark
-10,white gum
-11,pine wood
-12,bean-tree wood
-13,wood
-14,"wood (""grey"" gum)"
-15,leichhardt pine wood
-16,animal fur skin
-17,string
-18,bark
-19,fibre string
-20,resin - non specific
-21,resin
-22,feather
-23,rope
-24,ochre
-25,wattle wood (?)
-26,mimosa wood (?)
-27,emu fat
-28,charcoal
-29,corkwood
-30,soil
-31,bamboo
-32,sandalwood
-33,hardwood
-34,brown wood
-35,bone
-36,plant fiber
-37,gum
-38,animal dung
-39,textile
-40,ana-jalhout
-41,wood (ana-jal)
-42,pigment?
-43,paint
-44,wattle
-45,natural pigments (ochre)
-46,paper
-47,ink
-48,ochre pigment
-49,mungal wood
-50,soft wood
-51,carved wood
-52,feathers
-53,ochres on ironwood
-54,ochres on wood
-55,plant fibre string
-56,fibre cords
-57,ochres
-58,ink on wood
-59,wood with color
-60,with color
-61,adhesive - non specific
-62,red pigment
-63,reddish-brown iron wood
-64,wood; pigment
-65,"bamboo (according to the accession registers: ""prior material: wood"")"
-66,wood; resin
-67,wood; pigment; rockets blue
-68,wood; pigment; stone; resin
-69,wood and pigment
-70,bone (according to icm online catalogue)
-71,ocher
-72,plant fibers
-73,wood; ocher
-74,wood; dye; pigment
-75,wood; color pigment
-76,white paper
-77,wood; putty; organic
-78,wood; unknown material
-79,wood; pigment; binder
-80,organic;
+5,gidyea [acacia homalophylla]; wood plant
+6,pigment
+7,cuttibundi
+8,quinine
+9,peruvian bark
+10,ironbark
+11,white gum
+12,pine wood
+13,bean-tree wood
+14,wood
+15,"wood (""grey"" gum)"
+16,leichhardt pine wood
+17,animal fur skin
+18,string
+19,bark
+20,fibre string
+21,resin - non specific
+22,resin
+23,feather
+24,rope
+25,ochre
+26,wattle wood (?)
+27,mimosa wood (?)
+28,emu fat
+29,charcoal
+30,corkwood
+31,soil
+32,bamboo
+33,sandalwood
+34,hardwood
+35,brown wood
+36,pittosporum wood
+37,bone
+38,plant fiber
+39,gum
+40,animal dung
+41,textile
+42,ana-jalhout
+43,wood (ana-jal)
+44,myall wood (acacia harpophylla)
+45,pigment?
+46,milk wood
+47,paint
+48,myall wood
+49,(acacia harpophylla)
+50,wattle
+51,natural pigments (ochre)
+52,paper
+53,ink
+54,ochre pigment
+55,mungal wood
+56,soft wood
+57,carved wood
+58,feathers
+59,ochres on ironwood
+60,ochres on wood
+61,plant fibre string
+62,fibre cords
+63,ochres
+64,ink on wood
+65,wood with color
+66,with color
+67,adhesive - non specific
+68,red pigment
+69,reddish-brown iron wood
+70,wood; pigment
+71,"bamboo (according to the accession registers: ""prior material: wood"")"
+72,wood; resin
+73,wood; pigment; rockets blue
+74,wood; pigment; stone; resin
+75,wood and pigment
+76,bone (according to icm online catalogue)
+77,ocher
+78,plant fibers
+79,wood; ocher
+80,wood; dye; pigment
+81,wood; color pigment
+82,white paper
+83,wood; putty; organic
+84,wood; unknown material
+85,wood; pigment; binder
+86,organic;
+87,blackwood (acacia melanoxylon)
+88,hair

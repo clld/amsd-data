@@ -1,0 +1,40 @@
+{
+    "creators": [
+        {
+            "name": "Piers Kelly"
+        },
+        {
+            "name": "Junran Lei"
+        },
+        {
+            "name": "Hans-J\u00f6rg Bibiko"
+        },
+        {
+            "name": "Lorina Barker"
+        }
+    ],
+    "title": "Australian Message Stick Database",
+    "access_right": "open",
+    "keywords": [
+        "cldf:Generic",
+        "linguistics"
+    ],
+    "upload_type": "dataset",
+    "description": "<p>Cite the source of the dataset as:</p>\n\n<blockquote>\n<p>Kelly, Piers, Junran Lei, Hans-J\u00f6rg Bibiko, and Lorina Barker. 2024. &quot;AMSD: The Australian Message Stick Database.&quot; PLOS One 19 (4): e0299712. doi: https://doi.org/10.1371/journal.pone.0299712</p>\n</blockquote>",
+    "contributors": [
+        {
+            "name": "Robert Forkel",
+            "type": "DataCurator"
+        }
+    ],
+    "related_identifiers": [
+        {
+            "identifier": "https://doi.org/10.5281/zenodo.20186401",
+            "relation": "isSupplementedBy"
+        },
+        {
+            "identifier": "https://messagesticks.com.au/",
+            "relation": "isDocumentedBy"
+        }
+    ]
+}

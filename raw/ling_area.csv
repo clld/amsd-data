@@ -16,138 +16,145 @@ pk,chirila_name,austlang_code,austlang_name,glottolog_code
 15,Muruwari,D32,MURUWARI / MURRAWARRI,muru1266
 16,Yuwaalaraay,D27,Yuwaalaraay,yuwa1242
 17,Yambina,E51,Yambina,
-18,Biri,E56,Biri^,biri1256
-19,Gudjal,E60,Gudjal,gudj1237
-20,Karuwali,L35,Karuwali,karr1236
-21,Minkin,G26,Mingginda,mink1237
-22,Yukulta,G34,Yukulta / Ganggalidda,gang1267
-23,Linngithigh,Y26,Linngithigh,leni1238
-24,Alngith,Y32,Alngith,alng1239
-25,Kuku Nyungkul,Y90,Kuku Nyungkul,kuku1274
-26,Djabugay,Y106,Djabugay / Tjapukai^,dyaa1242
-27,Larrakia,N21,Larrakia,lara1258
-28,Jingulu,C22,Jingulu,djin1251
-29,Yugul,N85,Yugul,yugu1250
-30,Binbinka,N138,Binbinka,binb1242
-31,Mangarrayi,N78,Mangarrayi,mang1381
-32,Ngayawangka,A30,Ngadawanga,
-33,Djirbal,Y123,DYIRBAL / JIRRBAL,dyir1250
-34,Galaagu,A2,Kalarku,kala1379
-35,Mirniny,A9,Mirning,
-36,Giraiwurung,S25,Keerray Woorroong / Kirrae Whurrong,warr1257
-37,Wathawurrung,S29,Wathawurrung / Wadawurrung / Wathaurong,wath1238
-38,Warrgamay,Y134,Warrgamay^,warr1255
-39,Gabalbara,E45,Gabulbarra,
-40,Guwinmal,E49,Guwinmal,
-41,Pitta-Pitta,G6,Pitta Pitta,pitt1247
-42,Karanya,L32,Karanya,
-43,Kalkatungu,G13,Kalkatungu / Kalkadoon,kalk1246
-44,Danggali,D14,Thangkaali,
-45,Gunditjmara,S20,Dhauwurd Wurrung^,gund1249
-46,Lardil,G38,Lardil,lard1243
-47,Gunggari,D37,Gunggari,kung1258
-48,Luritja,C7.1,Luritja,pint1250
-49,Tiwi,N20,Tiwi,tiwi1244
-50,Ngarinyin,K18,Ngarinyin,ngar1284
-51,Worrorra,K17,Worrorra,worr1237
-52,Unggumi,K14,Unggumi,ungg1243
-53,Yiiji,K32,Yiiji,wuna1249
-54,Bunuba,K5,Bunuba,buna1275
-55,Kija,K20,Gija / Kija,kitj1240
-56,Ngiyambaa,D22,NGIYAMPAA / NGEMPA,wang1291
-57,Wiradjuri,D10,Wiradjuri,wira1262
-58,Dhangu,N192,Dhangu,dhan1270
-59,Mengerr,N53,Mengerrdji,mang1382
-60,Kamu,N33,Kamu,kamu1258
-61,Warndarang,N120,Warndarrang,wand1263
-62,Watjarri,A39,Wajarri / Wadjarri,waja1257
-63,Dhuwal,N141,Gumatj,guma1253
-64,Jawoyn,N57,Jawoyn,djau1244
-65,Alyawarr,C14,Alyawarr,alya1239
-66,Yirandali,L42,Yirandali,yira1239
-67,Yan-nhangu,N72,Yan-nhangu,yann1237
-68,Ngarinyman,C27,NGARINYMAN,ngar1235
-69,Wurrugu,N37,Wurrugu,wurr1238
-70,Western Arrarnte,C47,Western Arrarnta,west2441
-71,Jiwarliny,A88,Juwaliny,djuw1238
-72,Ngarluma,W38,Ngarluma,ngar1287
-73,Warriyangga,W22,Warriyangga,wari1262
-74,Wirangu,C1,Wirangu,wira1265
-75,Dagoman,N38,Dagoman,dago1245
-76,Gagudju,N50,Gaagudju,gaga1251
-77,Anindilyakwa,N151,Anindilyakwa,anin1240
-78,Ngatjumaya,A3,Ngadjumaya / Ngadju,ngad1258
-79,Flinders Island,Y147,Walmbarddha,
-80,Mutumui,Y63.1,Barrow Point,gugu1255
-81,Umbindhamu,Y138,Ganganda,umbi1243
-82,Lamalama,Y55,Morrobolam,lamu1254
-83,Flinders Island,Y67,Flinders Island language,flin1247
-84,Djinang,N94.1,Djinang,djin1253
-85,Ganalbingu,N83,Ganhalpuyngu,gana1269
-86,Yankunytjatjara,C4,Yankunytjatjara,yank1247
-87,Maung,N64,Mawng,maun1240
-88,Konbudj,N224,Gonbudj,
-89,Ganggalinda,G37,Yangkaal,nyan1300
-90,Kukatja,A68,Kukatja,kuka1246
-91,Pitjantjatjara,C6,Pitjantjatjara,pitj1243
-92,Wik Ngatharr,Y56,Wik Ngathanya,wikn1245
-93,Adnyamathanha,L55,Wailpi,adny1235
-94,Parnkala,L6,Barngarla,bang1339
-95,Yolngu,N230,YOLNGU MATHA,yuul1239
-96,Nyungar,W41,NOONGAR / NYOONGAR,nyun1247
-97,Gunwinggu,N173,Kuninjku,mura1269
-98,Tjupany,A31,Tjupan,
-99,Yuru,E62,Yuru,yuru1264
+18,Gudjal,E60,Gudjal,gudj1237
+19,Karuwali,L35,Karuwali,karr1236
+20,Minkin,G26,Mingginda,mink1237
+21,Yukulta,G34,Yukulta / Ganggalidda,gang1267
+22,Linngithigh,Y26,Linngithigh,leni1238
+23,Alngith,Y32,Alngith,alng1239
+24,Kuku Nyungkul,Y90,Kuku Nyungkul,kuku1274
+25,Djabugay,Y106,Djabugay / Tjapukai^,dyaa1242
+26,Larrakia,N21,Larrakia,lara1258
+27,Jingulu,C22,Jingulu,djin1251
+28,Yugul,N85,Yugul,yugu1250
+29,Binbinka,N138,Binbinka,binb1242
+30,Mangarrayi,N78,Mangarrayi,mang1381
+31,Ngayawangka,A30,Ngadawanga,
+32,Djirbal,Y123,DYIRBAL / JIRRBAL,dyir1250
+33,Galaagu,A2,Kalarku,kala1379
+34,Mirniny,A9,Mirning,
+35,Giraiwurung,S25,Keerray Woorroong / Kirrae Whurrong,warr1257
+36,Wathawurrung,S29,Wathawurrung / Wadawurrung / Wathaurong,wath1238
+37,Warrgamay,Y134,Warrgamay^,warr1255
+38,Gabalbara,E45,Gabulbarra,
+39,Guwinmal,E49,Guwinmal,
+40,Pitta-Pitta,G6,Pitta Pitta,pitt1247
+41,Karanya,L32,Karanya,
+42,Kalkatungu,G13,Kalkatungu / Kalkadoon,kalk1246
+43,Danggali,D14,Thangkaali,
+44,Gunditjmara,S20,Dhauwurd Wurrung^,gund1249
+45,Lardil,G38,Lardil,lard1243
+46,Gunggari,D37,Gunggari,kung1258
+47,Luritja,C7.1,Luritja,pint1250
+48,Tiwi,N20,Tiwi,tiwi1244
+49,Ngarinyin,K18,Ngarinyin,ngar1284
+50,Worrorra,K17,Worrorra,worr1237
+51,Unggumi,K14,Unggumi,ungg1243
+52,Yiiji,K32,Yiiji,wuna1249
+53,Bunuba,K5,Bunuba,buna1275
+54,Kija,K20,Gija / Kija,kitj1240
+55,Ngiyambaa,D22,NGIYAMPAA / NGEMPA,wang1291
+56,Wiradjuri,D10,Wiradjuri,wira1262
+57,Dhangu,N192,Dhangu,dhan1270
+58,Mengerr,N53,Mengerrdji,mang1382
+59,Kamu,N33,Kamu,kamu1258
+60,Warndarang,N120,Warndarrang,wand1263
+61,Watjarri,A39,Wajarri / Wadjarri,waja1257
+62,Dhuwal,N141,Gumatj,guma1253
+63,Jawoyn,N57,Jawoyn,djau1244
+64,Alyawarr,C14,Alyawarr,alya1239
+65,Yirandali,L42,Yirandali,yira1239
+66,Yan-nhangu,N72,Yan-nhangu,yann1237
+67,Ngarinyman,C27,NGARINYMAN,ngar1235
+68,Wurrugu,N37,Wurrugu,wurr1238
+69,Western Arrarnte,C47,Western Arrarnta,west2441
+70,Jiwarliny,A88,Juwaliny,djuw1238
+71,Ngarluma,W38,Ngarluma,ngar1287
+72,Warriyangga,W22,Warriyangga,wari1262
+73,Wirangu,C1,Wirangu,wira1265
+74,Dagoman,N38,Dagoman,dago1245
+75,Gagudju,N50,Gaagudju,gaga1251
+76,Anindilyakwa,N151,Anindilyakwa,anin1240
+77,Ngatjumaya,A3,Ngadjumaya / Ngadju,ngad1258
+78,Flinders Island,Y147,Walmbarddha,
+79,Mutumui,Y63.1,Barrow Point,gugu1255
+80,Umbindhamu,Y138,Ganganda,umbi1243
+81,Lamalama,Y55,Morrobolam,lamu1254
+82,Flinders Island,Y67,Flinders Island language,flin1247
+83,Djinang,N94.1,Djinang,djin1253
+84,Ganalbingu,N83,Ganhalpuyngu,gana1269
+85,Yankunytjatjara,C4,Yankunytjatjara,yank1247
+86,Maung,N64,Mawng,maun1240
+87,Konbudj,N224,Gonbudj,
+88,Ganggalinda,G37,Yangkaal,nyan1300
+89,Kukatja,A68,Kukatja,kuka1246
+90,Pitjantjatjara,C6,Pitjantjatjara,pitj1243
+91,Wik Ngatharr,Y56,Wik Ngathanya,wikn1245
+92,Adnyamathanha,L55,Wailpi,adny1235
+93,Parnkala,L6,Barngarla,bang1339
+94,Yolngu,N230,YOLNGU MATHA,yuul1239
+95,Nyungar,W41,NOONGAR / NYOONGAR,nyun1247
+96,Gunwinggu,N173,Kuninjku,mura1269
+97,Tjupany,A31,Tjupan,
+98,Yuru,E62,Yuru,yuru1264
+99,Biri,E56,Biri^,biri1256
 100,Guugu-Yimidhirr,Y82,GUUGU YIMIDHIRR,gugu1255
 101,Wangkathaa,A12,Wangkatha,
 102,Yolngu,N117.1,Murngin,yuul1239
 103,Yiiji,K32,Yiiji,yiij1234
 104,Yingkarta,W19,Yingkarta,ying1247
 105,Miwa,K44,Miwa,miwa1242
-106,Lamalama,Y136,Mbarrumbathama,lamu1254
-107,Wakaya,C16,Wakaya,waga1260
-108,Ngandi,N90,Ngandi,ngan1295
-109,Gureng Gureng,E32,GOORENG GOORENG,gure1255
-110,Mayawali,L40,Maiawali,
+106,Gugu Warra,Y80,Kuku-Warra,gugu1256
+107,Lamalama,Y136,Mbarrumbathama,lamu1254
+108,Wakaya,C16,Wakaya,waga1260
+109,Ngandi,N90,Ngandi,ngan1295
+110,Gureng Gureng,E32,GOORENG GOORENG,gure1255
 111,Mayi-Thakurti,G16,Mayi-Thakurti / Mitakoodi,mayi1234
-112,Warluwarra,G10,Warluwarra^,warl1256
-113,Nyamal,A58,Nyamal,nyam1271
-114,Wubuy,N128,Wubuy / Nunggubuyu,nung1290
-115,Wik Mungkan,Y57,Wik Mungkan,wikm1247
-116,Yangman,N68,Yangman,yang1288
-117,Djapu,N145,Djapu,djap1238
-118,Gunwinggu,N70,Kune,gune1238
-119,Wunambal,K22,Wunambal,wuna1249
-120,Nulit,S91,Nulit,
-121,Kurnai,S68,GUNAI / KURNAI,gana1278
-122,Muk-Thang,S45,Brabalung,
-123,Thangguai,S48,Krauatungalang,
-124,Bidhawal,S49,Bidawal,gana1268
-125,Malak Malak,N22,Malak Malak,mull1237
-126,Yanyuwa,N153,Yanyuwa,yany1243
-127,Ngaanyatjarra,A38,Ngaanyatjarra,ngaa1240
-128,Warrwa,K10,Warrwa,warr1258
-129,Karajarri,A64,Karajarri,kara1476
-130,Burarra,N82,Burarra,bura1267
-131,Gunibidji,N74,Ndjebbana,djee1236
-132,Gunwinggu,N65,Kunwinjku,guma1252
-133,Iwaidja,N39,Iwaidja,iwai1244
-134,Duungidjawu,E20,Duungidjawu,duun1241
-135,Ngangikurunggurr,N157,NGAN'GI,nang1259
-136,no code,N161,Marri Tjevin,mari1421
-137,Ngunawal,D3,Ngunawal / Ngunnawal,ngun1277
-138,Eora,S61,Eora,
-139,Muruwari,D32,MURUWARI,muru1266
-140,Guwar,E26,Guwar,guwa1244
-141,Yuat,W11,Yuat,
-142,Mara,N112,Marra,mara1385
-143,Alawa,N92,Alawa,alaw1244
-144,Bachamal,N31,Batjamalh,
-145,Warrnambool,S20,Dhauwurd Wurrung^,gund1249
-146,Djabwurung,S26,Djab Wurrung^,djab1234
-147,Wangkumara,L25,Wangkumara,wong1246
-148,Yuin,S67,Yuin,yuin1242
-149,Purduna,W24,Burduna,burd1238
-150,Pinikura,W34,Pinikura,pini1244
-151,Diyari,L17,Dieri,dier1241
-152,Arakwal,E13,Arakwal,arak1254
+112,Mayawali,L40,Maiawali,
+113,Warluwarra,G10,Warluwarra^,warl1256
+114,Wangkayutyuru,G5,Wangka-Yutjurru^,
+115,Yinjilanji,G14,Indjilandji,yind1248
+116,Nyamal,A58,Nyamal,nyam1271
+117,Wubuy,N128,Wubuy / Nunggubuyu,nung1290
+118,Wik Mungkan,Y57,Wik Mungkan,wikm1247
+119,Yangman,N68,Yangman,yang1288
+120,Djapu,N145,Djapu,djap1238
+121,Gunwinggu,N70,Kune,gune1238
+122,Wunambal,K22,Wunambal,wuna1249
+123,Nulit,S91,Nulit,
+124,Kurnai,S68,GUNAI / KURNAI,gana1278
+125,Muk-Thang,S45,Brabalung,
+126,Thangguai,S48,Krauatungalang,
+127,Bidhawal,S49,Bidawal,gana1268
+128,Malak Malak,N22,Malak Malak,mull1237
+129,Yanyuwa,N153,Yanyuwa,yany1243
+130,Ngaanyatjarra,A38,Ngaanyatjarra,ngaa1240
+131,Warrwa,K10,Warrwa,warr1258
+132,Karajarri,A64,Karajarri,kara1476
+133,Burarra,N82,Burarra,bura1267
+134,Gunibidji,N74,Ndjebbana,djee1236
+135,Gunwinggu,N65,Kunwinjku,guma1252
+136,Iwaidja,N39,Iwaidja,iwai1244
+137,Duungidjawu,E20,Duungidjawu,duun1241
+138,Ngangikurunggurr,N157,NGAN'GI,nang1259
+139,no code,N161,Marri Tjevin,mari1421
+140,Ngunawal,D3,Ngunawal / Ngunnawal,ngun1277
+141,Eora,S61,Eora,
+142,Muruwari,D32,MURUWARI,muru1266
+143,Guwar,E26,Guwar,guwa1244
+144,Yuat,W11,Yuat,
+145,Mara,N112,Marra,mara1385
+146,Alawa,N92,Alawa,alaw1244
+147,Bachamal,N31,Batjamalh,
+148,Warrnambool,S20,Dhauwurd Wurrung^,gund1249
+149,Djabwurung,S26,Djab Wurrung^,djab1234
+150,Wangkumara,L25,Wangkumara,wong1246
+151,Yuin,S67,Yuin,yuin1242
+152,Purduna,W24,Burduna,burd1238
+153,Pinikura,W34,Pinikura,pini1244
+154,Diyari,L17,Dieri,dier1241
+155,Arakwal,E13,Arakwal,arak1254
+156,Jaminjung,N18,Jaminjung,jami1236
+157,no code,N158,Murrinh-kura,murr1261
+158,Mayi-Kutuna,G24,Mayi-Kutuna,maya1280
+159,Nguburindi,G19,Nguburinji,ngub1238

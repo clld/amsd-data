@@ -107,3 +107,6 @@ translations/.i18n-editor-metadata
 
 # macOSX hidden files
 .DS_Store
+mediafiles/upload
+images/media
+raw/amsd_*.zip

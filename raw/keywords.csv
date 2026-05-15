@@ -5,7 +5,7 @@ pk,name
 4,traced_artefact
 5,musv_priority
 6,asynchronous
-7,to_exhibit
+7,to_exhibit_musv
 8,first_inventors
 9,provenance_discovery
 10,calendar
@@ -15,111 +15,166 @@ pk,name
 14,multiple_sources
 15,named_creator
 16,tally_imprecise
-17,signature
-18,long_distance
-19,short_distance
-20,without_glottocode [yugambeh]
-21,on_display
-22,cross_linguistic
-23,without_glottocode [wadjalang]
-24,kinship
-25,shoppinglist
-26,fictional
-27,verbal_account
-28,first_inventors_am
-29,route_of_messenger
-30,unlocalisable
-31,invoice
-32,tally_precise
-33,pigment_ochre
-34,ngukurr
-35,route_of_participants
-36,orientation_boustrophedon
-37,"without_glottocode [mirning, near eucla, not subgroup]"
-38,to_exhbit
-39,"without_glottocode [mirniny, variety near eucla, not subgroup]"
-40,without_glottocode (mirniny by chirila definition]
-41,"without_glottocode (mirniny, by chirila definition)"
-42,rebus
-43,named creator
-44,sender_woman
-45,without_glottocode [guwinmal]
-46,without_glottocode [mambura/guwinmal/gabalbara]
-47,interesting
-48,kalkadoonpbc
-49,to_be_mapped
-50,without_glottocode [thangkaali; wanyiwalku]
-51,without_glottocode [thangkaali]
-52,tjurunga
-53,awh1889p331f2
-54,pigment_blue
-55,to_be_merged
-56,text_reference
-57,recipient_woman
-58,political
-59,check_coord
-60,infini
-61,orientation
-62,pseudowriting
-63,to_be_traced
-64,arnhem_land
-65,topend_arnhem_west
-66,to_be_merged?
-67,significant
-68,recipient_woman_white
-69,tally
-70,messenger_woman
-71,punu
-72,pigment_reckitts
-73,reproducible
-74,doubtful
-75,pigment
-76,repurposed
-77,samuseum
-78,without_glottocode
-79,add_image
-80,maningrida2
-81,topographical
-82,clapstick
-83,merge
-84,sam_register_not_checked
-85,parliament
-86,fix_missing_catalogue_description
-87,fix_two_different_sticks
-88,[from lexical item?]
-89,repatriation
-90,pmh_visit
-91,response
-92,glossed_artefact (when compared to previous artefact)
-93,without_glottocode [karanya]
-94,messenger_man
-95,merge [search 12619]
-96,purpose_news
-97,maningrida
-98,permission_request
-99,dbsm
-100,lexical_item
-101,negative_text_reference
-102,without_glottocode [nulit]
-103,guanlim
-104,yirrkala
-105,access_request
-106,pigmentation
-107,ngilipiji
-108,merge?
-109,musv_register_not_checked
-110,merge [?]
-111,messenger_white
-112,sender_white
-113,merge_groote
-114,invoce
-115,unprovenanced
-116,nmeo_h0123882
-117,hand painted
-118,nms_museum
-119,"two message sticks. a: with burnt designs in yellow. b: with incised designs, into which red paint is rubbed. the exact meaning of these sticks is not understood but they sometimes bear signs corresponding to totemic features of the route followed in transporting them."
-120,see remarks in notes for more info re the 2nd stick.
-121,compare_frank
-122,interpreted_artefact(?)
-123,"ramm online catalogue: ""this is a message stick, incised with designs that communicate a message. whole etched with diamond pattern"""
-124,audio_file
+17,native_title_vic
+18,signature
+19,long_distance
+20,short_distance
+21,without_glottocode [yugambeh]
+22,on_display
+23,cross_linguistic
+24,without_glottocode [wadjalang]
+25,kinship
+26,shoppinglist
+27,fictional
+28,sender_white
+29,verbal_account
+30,to_exhibit_amus
+31,first_inventors_am
+32,route_of_messenger
+33,both_lists_amus
+34,am_shortlist
+35,to_exhibit_amus_shortlist
+36,the_helens
+37,unlocalisable
+38,qm_report
+39,qm_report_cannot_id
+40,invoice
+41,tally_precise
+42,pigment_ochre
+43,ngukurr
+44,route_of_participants
+45,qm_request
+46,sacred
+47,to_be_merged
+48,orientation_boustrophedon
+49,"without_glottocode [mirning, near eucla, not subgroup]"
+50,to_exhbit
+51,"without_glottocode [mirniny, variety near eucla, not subgroup]"
+52,without_glottocode (mirniny by chirila definition]
+53,"without_glottocode (mirniny, by chirila definition)"
+54,rebus
+55,to_exhibit
+56,sender_woman
+57,without_glottocode [guwinmal]
+58,without_glottocode [mambura/guwinmal/gabalbara]
+59,warfare
+60,to_be_merged (with e077074-006)
+61,interesting
+62,kalkadoonpbc
+63,topographical
+64,channel_country
+65,to_be_mapped
+66,am_shortlist_channel
+67,isabel_photo
+68,without_glottocode [thangkaali; wanyiwalku]
+69,without_glottocode [thangkaali]
+70,tjurunga
+71,awh1889p331f2
+72,pigment_blue
+73,text_reference
+74,recipient_woman
+75,political
+76,infini
+77,orientation
+78,pseudowriting
+79,tally
+80,to_be_traced
+81,to_exhibit_nma
+82,arnhem_land
+83,topend_arnhem_west
+84,to_be_merged?
+85,tlc_report
+86,significant
+87,recipient_woman_white
+88,messenger_woman
+89,to_exhibit_bm
+90,punu
+91,pigment_reckitts
+92,reproducible
+93,doubtful
+94,pigment
+95,repurposed
+96,samuseum
+97,to_exhibit_sam
+98,without_glottocode
+99,add_image
+100,maningrida2
+101,hairpin
+102,blm_report
+103,to_be_merged_tiwi_cpm1958p106f7d
+104,to_be_merged_tiwi
+105,to_be_merged_tiwi_cpm1958p172f6c
+106,to_be_merged_tiwi_cpm1958p103f5b
+107,to_be_merged_tiwi_cpm1958p104f6j
+108,to_be_merged_tiwi_cpm1958p104f5c
+109,blm_report_priority
+110,clapstick
+111,messenger_man_white
+112,merge
+113,sam_register_not_checked
+114,parliament
+115,fix_missing_catalogue_description
+116,fix_two_different_sticks
+117,[from lexical item?]
+118,repatriation
+119,pmh_visit
+120,archaeological_context
+121,am_shortlist_kimberley
+122,am_emu_checked
+123,reckitts
+124,am_register_checked
+125,meaningless
+126,response
+127,glossed_artefact (when compared to previous artefact)
+128,without_glottocode [karanya]
+129,messenger_man
+130,localised_artefact
+131,to_be_merged [search enemies]
+132,merge [search 12619]
+133,purpose_news
+134,maningrida
+135,permission_request
+136,dbsm
+137,lexical_item
+138,negative_text_reference
+139,without_glottocode [nulit]
+140,guanlim
+141,to_be_merged_tiwi_sam_a_47143
+142,to_be_merged_tiwi_sam_a_47153
+143,to_be_merged_tiwi_sam_a_47144
+144,to_be_merged_tiwi_sam_a_47141
+145,to_be_merged_tiwi_sam_a_47134
+146,to_be_merged_tiwi_sam_a_47135
+147,to_exhibit_blm
+148,yirrkala
+149,access_request
+150,recipient_man_white
+151,to_exhibit_magnt
+152,pigmentation
+153,ngilipiji
+154,merge?
+155,location_info
+156,to_be_merged [?]
+157,messenger_white
+158,merge_groote
+159,colexification
+160,unprovenanced
+161,nmeo_h0123882
+162,hand painted
+163,nms_museum
+164,"two message sticks. a: with burnt designs in yellow. b: with incised designs, into which red paint is rubbed. the exact meaning of these sticks is not understood but they sometimes bear signs corresponding to totemic features of the route followed in transporting them."
+165,see remarks in notes for more info re the 2nd stick.
+166,compare_frank
+167,interpreted_artefact(?)
+168,"ramm online catalogue: ""this is a message stick, incised with designs that communicate a message. whole etched with diamond pattern"""
+169,audio_file
+170,interpreted_artefact?
+171,uq_request
+172,to_be_merged [search belcher or kerkhove]
+173,"a snippet of an abc 7:30 news segment, broadcast on 18 june 2025, featuring several message sticks presented as part of the yoorook truth-telling inquiry"
+174,paper yabber
+175,disassociated
+176,qm_to_be_merged: check rhh burketown entries
+177,qm_register_checked
+178,qm_to_be_merged: check rhh for burketown
+179,messenger_white_man

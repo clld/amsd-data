@@ -1,0 +1,481 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "en"
+        }
+    ],
+    "dc:bibliographicCitation": "Kelly, Piers, Junran Lei, Hans-J\u00f6rg Bibiko, and Lorina Barker. 2024. \"AMSD: The Australian Message Stick Database.\" PLOS One 19 (4): e0299712. doi: https://doi.org/10.1371/journal.pone.0299712",
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#Generic",
+    "dc:identifier": "https://amsd.clld.org/",
+    "dc:title": "Australian Message Stick Database",
+    "dcat:accessURL": "https://github.com/clld/amsd-data",
+    "prov:wasDerivedFrom": [
+        {
+            "rdf:about": "https://github.com/clld/amsd-data",
+            "rdf:type": "prov:Entity",
+            "dc:created": "44d6b0d",
+            "dc:title": "Repository"
+        },
+        {
+            "rdf:about": "https://github.com/glottolog/glottolog",
+            "rdf:type": "prov:Entity",
+            "dc:created": "v5.3",
+            "dc:title": "Glottolog"
+        }
+    ],
+    "prov:wasGeneratedBy": [
+        {
+            "dc:title": "python",
+            "dc:description": "3.12.3"
+        },
+        {
+            "dc:title": "python-packages",
+            "dc:relation": "requirements.txt"
+        }
+    ],
+    "rdf:ID": "amsd",
+    "rdf:type": "http://www.w3.org/ns/dcat#Distribution",
+    "tables": [
+        {
+            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#LanguageTable",
+            "dc:description": "Linguistic areas",
+            "dc:extent": 159,
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "[a-zA-Z0-9_\\-]+"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "required": true,
+                        "name": "ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+                        "required": false,
+                        "name": "Name"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#macroarea",
+                        "required": false,
+                        "name": "Macroarea"
+                    },
+                    {
+                        "datatype": {
+                            "base": "decimal",
+                            "minimum": "-90",
+                            "maximum": "90"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#latitude",
+                        "required": false,
+                        "name": "Latitude"
+                    },
+                    {
+                        "datatype": {
+                            "base": "decimal",
+                            "minimum": "-180",
+                            "maximum": "180"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#longitude",
+                        "required": false,
+                        "name": "Longitude"
+                    },
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "[a-z0-9]{4}[1-9][0-9]{3}"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#glottocode",
+                        "required": false,
+                        "valueUrl": "http://glottolog.org/resource/languoid/id/{Glottocode}",
+                        "name": "Glottocode"
+                    },
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "[a-z]{3}"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#iso639P3code",
+                        "required": false,
+                        "name": "ISO639P3code"
+                    },
+                    {
+                        "valueUrl": "https://aiatsis.gov.au/austlang/language/{Austlang_Code}",
+                        "name": "Austlang_Code"
+                    }
+                ],
+                "primaryKey": [
+                    "ID"
+                ]
+            },
+            "url": "languages.csv"
+        },
+        {
+            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#MediaTable",
+            "dc:extent": 3531,
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "[a-zA-Z0-9_\\-]+"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "required": true,
+                        "name": "ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+                        "required": false,
+                        "name": "Name"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description",
+                        "required": false,
+                        "name": "Description"
+                    },
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "[^/]+/.+"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#mediaType",
+                        "required": true,
+                        "name": "Media_Type"
+                    },
+                    {
+                        "datatype": "anyURI",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#downloadUrl",
+                        "required": false,
+                        "name": "Download_URL"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#pathInZip",
+                        "required": false,
+                        "name": "Path_In_Zip"
+                    }
+                ],
+                "primaryKey": [
+                    "ID"
+                ]
+            },
+            "url": "media.csv"
+        },
+        {
+            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ContributionTable",
+            "dc:description": "The AMSD has the strict structure of one discrete item per database entry. But within each\nentry, a single item may have multiple sources informing it and more than one representation,\nfor example, an official museum photograph, a hand-drawn sketch in a notebook, an illustration\nin a published article, etc. The core item types are labelled as follows, with counts accurate\nat the time of publication:\n- message stick in a collection (N = 1197),\n- message stick in a private collection (N = 70),\n- message stick from a private sale (N = 49),\n- image of a message stick (artefact missing) (N = 170),\n- footage of a message stick (N = 6) and\n- image of a message stick and messenger (N = 5).\n\nThree additional item types are associated with indirect sources evidence for message stick use.\nThese are:\n- positive text reference (N = 19) referring to an observation of message stick use in a\nparticular time and place recorded in an archive,\n- lexical item (N = 10) meaning an Indigenous term for message stick from an identifiable\nAustralian language, and\n- message stick accessory (N = 4) referring to paraphernalia connected to a message stick such\nas cleft carrying sticks.\n\nThe final two item types are\n- negative text reference (N = 5) recording an archival observation that no message sticks are\nused by a particular group or in a particular territory at a specific time in history, and\n- fictional message stick (N = 22) for imaginative or artistic representations of message\nsticks that are not known to have existed but which may have a bearing on the cultural\nhistory of these objects.\n\nThus, in terms of plotting the distribution of message sticks, the final two item types must be\nexcluded from raw counts, although negative text reference may be used to identify historical\nabsences. These item types are designed to capture the range of data types that contribute to\nthe dataset as a whole, but may overlap.",
+            "dc:extent": 2152,
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "[a-zA-Z0-9_\\-]+"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "required": true,
+                        "name": "ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+                        "required": false,
+                        "name": "Name"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description",
+                        "required": false,
+                        "name": "Description"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#contributor",
+                        "required": false,
+                        "name": "Contributor"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#citation",
+                        "required": false,
+                        "name": "Citation"
+                    },
+                    {
+                        "dc:description": "See above",
+                        "datatype": {
+                            "base": "string",
+                            "format": "message\\ stick\\ found\\ in\\ situ|message\\ stick\\ in\\ a\\ collection|message\\ stick\\ in\\ a\\ private\\ collection|message\\ stick\\ from\\ a\\ private\\ sale|image\\ of\\ a\\ message\\ stick\\ \\(artefact\\ missing\\)|footage\\ of\\ a\\ message\\ stick|image\\ of\\ a\\ message\\ stick\\ and\\ messenger|image\\ of\\ a\\ message\\ stick\\ accessory\\ and\\ messenger|text\\ reference|positive\\ text\\ reference|lexical\\ item|message\\ stick\\ accessory|negative\\ text\\ reference|fictional\\ message\\ stick"
+                        },
+                        "name": "Item_Type"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Item_Subtype"
+                    },
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "New\\ South\\ Wales|Victoria|Northern\\ Territory|Western\\ Australia|South\\ Australia|Queensland"
+                        },
+                        "separator": " + ",
+                        "name": "State_Territory"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Cultural_Region"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Motifs"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Motif_Transcription"
+                    },
+                    {
+                        "separator": " + ",
+                        "name": "Keywords"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Object_Creator"
+                    },
+                    {
+                        "dc:description": "Year of creation. See also Note_Date_Created",
+                        "datatype": "int",
+                        "name": "Date_Created"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Note_Date_Created"
+                    },
+                    {
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference",
+                        "separator": " ",
+                        "name": "Linguistic_Areas"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Note_Linguistic_Areas"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Stick_Term"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Message"
+                    },
+                    {
+                        "dc:description": "Dimensions of the message stick in mm.",
+                        "separator": " ",
+                        "name": "Dimensions"
+                    },
+                    {
+                        "dc:description": "A note specifying how to interpret dimensions.",
+                        "name": "Note_Dimensions"
+                    },
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "wood\\ plant|cotton\\ yarn\\ plant|string\\ binding|kaolin\\ clay|gidyea\\ \\[acacia\\ homalophylla\\];\\ wood\\ plant|pigment|cuttibundi|quinine|peruvian\\ bark|ironbark|white\\ gum|pine\\ wood|bean\\-tree\\ wood|wood|wood\\ \\(\"grey\"\\ gum\\)|leichhardt\\ pine\\ wood|animal\\ fur\\ skin|string|bark|fibre\\ string|resin\\ \\-\\ non\\ specific|resin|feather|rope|ochre|wattle\\ wood\\ \\(\\?\\)|mimosa\\ wood\\ \\(\\?\\)|emu\\ fat|charcoal|corkwood|soil|bamboo|sandalwood|hardwood|brown\\ wood|pittosporum\\ wood|bone|plant\\ fiber|gum|animal\\ dung|textile|ana\\-jalhout|wood\\ \\(ana\\-jal\\)|myall\\ wood\\ \\(acacia\\ harpophylla\\)|pigment\\?|milk\\ wood|paint|myall\\ wood|\\(acacia\\ harpophylla\\)|wattle|natural\\ pigments\\ \\(ochre\\)|paper|ink|ochre\\ pigment|mungal\\ wood|soft\\ wood|carved\\ wood|feathers|ochres\\ on\\ ironwood|ochres\\ on\\ wood|plant\\ fibre\\ string|fibre\\ cords|ochres|ink\\ on\\ wood|wood\\ with\\ color|with\\ color|adhesive\\ \\-\\ non\\ specific|red\\ pigment|reddish\\-brown\\ iron\\ wood|wood;\\ pigment|bamboo\\ \\(according\\ to\\ the\\ accession\\ registers:\\ \"prior\\ material:\\ wood\"\\)|wood;\\ resin|wood;\\ pigment;\\ rockets\\ blue|wood;\\ pigment;\\ stone;\\ resin|wood\\ and\\ pigment|bone\\ \\(according\\ to\\ icm\\ online\\ catalogue\\)|ocher|plant\\ fibers|wood;\\ ocher|wood;\\ dye;\\ pigment|wood;\\ color\\ pigment|white\\ paper|wood;\\ putty;\\ organic|wood;\\ unknown\\ material|wood;\\ pigment;\\ binder|organic;|blackwood\\ \\(acacia\\ melanoxylon\\)|hair"
+                        },
+                        "separator": " + ",
+                        "name": "Material"
+                    },
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "incised|carved|notched|bound|incised\\ \\ carved|painted\\ \\(blue\\)|the\\ work\\ has\\ been\\ accomplished\\ with\\ a\\ marsupial\\ incisor|and\\ is\\ extremely\\ faint\\ in\\ places\\.|raddled\\ with\\ a\\ dark\\-red\\ ochre|ochred|twisted|pigmented|pokerwork|engraved|pyro\\-engraved|red\\-colored|carving|painted|painted\\ \\(red\\)|incised\\ decoration|inlaid\\ with\\ pigments|incised\\ decor|depths\\ with\\ pigment|carved\\ and\\ colored|berndt\\ card\\ file\\ under\\ 'condition/preservation':\\ \"sprayed\\ 1971\"|etching|burnt|carved\\ and\\ pokerwork|etched|pyro\\-engraved\\ \\(the\\ term\\ refers\\ to\\ a\\ technique\\ used\\ to\\ decorate\\ wood\\ or\\ other\\ materials\\ with\\ burn\\ marks\\ created\\ with\\ a\\ heated\\ object\\ used\\ to\\ engrave\\ or\\ incise\\ the\\ surface\\ of\\ the\\ object\\.\\)|curved|scratched|rubbed|wood\\ carving;\\ painted|cut;\\ colored|cut|cut;\\ painted|carved\\ and\\ painted|carved\\ and\\ engraved|carve|etch|kerbschnitzerei\\ \\(google\\ translate:\\ chip\\ carving\\)|schnitzerei;\\ ritzung\\ \\(google\\ translate:\\ carving;\\ incision\\)|ritzung\\ \\(google\\ translate:\\ engraving\\)|not\\ specified|schnitzerei;\\ brandmalerei\\ \\(google\\ translate:\\ carving;\\ pyrography\\)|schnitzerei\\ \\(google\\ translate:\\ carving\\)|shaped|notched\\ and\\ incised|shaped\\ and\\ incised|unknown"
+                        },
+                        "separator": " + ",
+                        "name": "Technique"
+                    },
+                    {
+                        "datatype": "string",
+                        "separator": " + ",
+                        "name": "Source_Citation"
+                    },
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "book|journal\\ article|book\\ chapter|museum\\ collection|book\\ article|article|text\\ source|newspaper\\ article|unpublished\\ manuscript|sale\\ item,\\ ebay|private\\ sale|sale\\ item,\\ lawsons\\ auctioneers|sale\\ item,\\ www\\.carters\\.com\\.au|archive|cultural\\ institution|book\\ source|ethnographic\\ collection"
+                        },
+                        "separator": " + ",
+                        "name": "Source_Type"
+                    },
+                    {
+                        "datatype": "integer",
+                        "name": "Year_Collected"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Note_Date_Collected"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Holder_File"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Holder_Object_ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Collector"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Place_Collected"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "File_Copyright"
+                    },
+                    {
+                        "datatype": {
+                            "base": "decimal",
+                            "minimum": "-90",
+                            "maximum": "90"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#latitude",
+                        "required": false,
+                        "name": "Latitude"
+                    },
+                    {
+                        "datatype": {
+                            "base": "decimal",
+                            "minimum": "-180",
+                            "maximum": "180"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#longitude",
+                        "required": false,
+                        "name": "Longitude"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Note_Coordinates"
+                    },
+                    {
+                        "datatype": "anyURI",
+                        "name": "URL_Institution"
+                    },
+                    {
+                        "datatype": "anyURI",
+                        "separator": " ",
+                        "name": "Source_URLs"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Related"
+                    },
+                    {
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#comment",
+                        "name": "Note"
+                    },
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "sd_journey|sd_time|sd_request_help|sd_person_sender|sd_person_recipient|sd_request_invitation_ceremony|sd_ceremony|sd_person_group|sd_person_woman_wife|sd_request_invitation|sd_illness|sd_person|sd_reminder|sd_person_singer|sd_person_woman|sd_person_dancer|sd_person_man_elder|sd_person_man|sd_ceremony_law|sd_skin|sd_person_boy|sd_clan|sd_activity_hunting|sd_fence|sd_animal_emu|sd_animal_wallaby|sd_acculturation|sd_game|sd_urgency|sd_death|sd_place|sd_animal_ibis|sd_place_river|sd_time_moon|sd_place_lawground|sd_journey_route|sd_activity_stay|sd_activity_accompany|sd_activity_travel|sd_request_item|sd_item_handkerchief|sd_item_luxury|sd_request|sd_track|sd_place_camp|sd_ceremony_law_women|sd_body_vulva|sd_request_woman|sd_person_woman_girl|sd_person_woman_widow|sd_ceremony_showfight|sd_weapon_woomera|sd_weapon_spear|sd_payment|sd_person_brother|sd_person_sister|sd_person_police|sd_marriage|sd_item_cloth|sd_item_trousers|sd_item_singlet|sd_violence|sd_person_mother|sd_person_grandmother|sd_weapon_boomerang|sd_person_messenger|sd_item_headband|sd_person_child|sd_person_father|sd_request_invitation_ceremony_law|sd_warning|sd_person_enemy|sd_time_wetseason|sd_meeting|to_exhibit|sd_place_waterhole|sd_place_dam|sd_place_mission|sd_number_1|sd_food_wheatporridge|sd_place_ground|sd_gate|sd_grass|sd_animal_sheep|sd_activity_takeperson|sd_time_tomorrow|sd_bridge|sd_war|sd_number|sd_execution|sd_trap|sd_place_meetingplace|sd_hill_sandhill|sd_creek_sandycreek|sd_place_country|sd_item_pituri|sd_request_item_pituri|sd_activity_initiate|sd_item|sd_item_bullroarer|sd_activity_markwithochre|sd_person_son|sd_request_invitation_ceremony_dance|sd_place_dancingground|sd_activity_walking|sd_activity_war|sd_tree|sd_animal_grub|sd_animal_goanna|sd_time_star|sd_direction_west|sd_plant_tree|sd_place_darwin|sd_place_australianmainland|sd_place_aspleystraits|sd_person_group_melvilleislanders|sd_person_group_bathurstislanders|sd_place_walcottinlet|sd_place_creek|sd_person_group_language|sd_activity_meeting|sd_place_confluence|sd_person_group_recipients|sd_place_house|sd_place_gibbriver|sd_place_station|sd_activity_kill|sd_person_dead|sd_news|sd_event|sd_place_hills|sd_ceremony_funeral|sd_request_alliance|sd_body_penis|sd_body_beard|sd_mountain|sd_item_blanket|sd_drought|sd_mosquito|sd_fly|sd_activity_ceremony|sd_place_katherineriver|sd_place_bush|purpose_response|purpose_request|sd_activity_marriage|sd_person_man_son|sd_person_man_father|sd_person_female_girl|sd_item_tobacco|purpose_news|sd_place_arnhembay|sd_place_yirrkala|sd_injury|sd_item_djudapole|sd_ceremony_nara|sd_sender_boy|sd_messenger_white|sd_place_dalywaters|sd_activity_cuthair|sd_activity_sendhair|sd_recipient_woman|sd_ceremony_setfight"
+                        },
+                        "separator": " ",
+                        "name": "Semantic_Domains"
+                    },
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "Piers\\ Kelly|Alexandra\\ Roginski|Julia\\ Bespamyatnykh|Olena\\ Tykhostup|Lorina\\ Barker|Nitzan\\ Rotman|11\\.02\\.2025\\ PK:\\ Wrote\\ to\\ seller\\ requesting\\ more\\ information|On\\ same\\ date,\\ seller\\ replied\\ \"|Thank\\ you\\ for\\ reaching\\ out\\.|There\\ is\\ no\\ documentation\\ we\\ can\\ provide\\.\\ We\\ can\\ advise\\ the\\ vendor\\ of\\ this\\ item\\ provided\\ this\\ description\\.\\ Although\\ we\\ cannot\\ reveal\\ who\\ they\\ are,\\ they\\ are\\ a\\ well\\-established\\ and\\ long\\-standing\\ collector\\.\\ We\\ then\\ had\\ the\\ entirety\\ of\\ this\\ auction\\ reviewed\\ by\\ an\\ independent\\ anthropologist\\ who\\ has\\ confirmed\\ all\\ descriptions\\.\"|16\\.11\\.2025\\ PK:\\ Wrote\\ to\\ Torquay\\ Museum:\\ \"Dear\\ Torquay\\ Museum,|I\\ am\\ the\\ lead\\ researcher\\ on\\ the\\ Australian\\ Message\\ Stick\\ Project\\ which\\ aims\\ to\\ compile\\ a\\ global\\ inventory\\ of\\ message\\ sticks\\ in\\ world\\ collections\\.|A\\ search\\ of\\ your\\ database\\ has\\ brought\\ up\\ two\\ items,\\ but\\ there\\ is\\ a\\ third\\ mentioned\\ in\\ this\\ book:|Sculthorpe,\\ Gaye,\\ Maria\\ Nugent,\\ and\\ Frances\\ Morphy,\\ eds\\.\\ 2021\\.\\ Ancestors,\\ artefacts,\\ empire:\\ Indigenous\\ Australia\\ in\\ British\\ and\\ Irish\\ Museums\\.\\ London:\\ The\\ British\\ Museum\\ \\&\\ The\\ National\\ Museum\\ of\\ Australia\\.|The\\ relevant\\ entry\\ is\\ on\\ p\\.254:|\"Torquay\\ Museum:\\ From\\ the\\ Cairns\\ region,\\ a\\ message\\ stick\\ from\\ photographer\\ and\\ collector\\ W\\.\\ Charles\\ Handley\\.\\ \"|Are\\ you\\ able\\ to\\ provide\\ catalogue\\ data\\ for\\ this\\ item\\ collected\\ by\\ W\\.\\ Charles\\ Handley\\?|Many\\ thanks,|Piers\"|\\[Torquay\\ Museum:\\]|Dear\\ Piers,|I\\ am\\ sorry\\ about\\ the\\ delay\\ in\\ replying\\.\\ I\\ did\\ have\\ a\\ look\\ for\\ the\\ message\\ stick\\ and\\ couldn\u2019t\\ find\\ any\\ trace\\ of\\ it\\ or\\ any\\ mention\\ of\\ Handley\\.\\ The\\ only\\ item\\ we\\ have|mentioning\\ Cairns\\ is\\ a\\ note,\\ please\\ see\\ record:|\\[E594\\.2\\]|I\\ hadn\u2019t\\ replied\\ because\\ I\\ was\\ hoping\\ to\\ have\\ a\\ look\\ in\\ the\\ store\\ to\\ see\\ if\\ I\\ could\\ find\\ any\\ trace\\ but\\ I\\ haven\u2019t\\ had\\ a\\ chance\\.\\ I\\ have\\ looked\\ through\\ all\\ the\\ paperwork\\ though\\ and\\ can\u2019t\\ find\\ anything\\.|Sorry\\ I\\ can\u2019t\\ be\\ of\\ more\\ help\\.|Let\\ me\\ know\\ if\\ there\\ is\\ anything\\ else\\ you\\ need\\.|Best\\ Wishes,|Clare\"|02\\.04\\.2026\\ PK:\\ Note\\ that\\ these\\ TM_E594_1\\ and\\ TM_E594_2\\ are\\ consecutive\\ accession\\ numbers\\.\\ Thus\\ it\\ is\\ possible\\ that\\ TM_E594_2\\ was\\ the\\ wrapper\\ for\\ TM_E594_1\\."
+                        },
+                        "separator": " + ",
+                        "name": "Data_Entry"
+                    },
+                    {
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#mediaReference",
+                        "separator": " ",
+                        "name": "Media_IDs"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": [
+                            "Linguistic_Areas"
+                        ],
+                        "reference": {
+                            "resource": "languages.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    },
+                    {
+                        "columnReference": [
+                            "Media_IDs"
+                        ],
+                        "reference": {
+                            "resource": "media.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    },
+                    {
+                        "columnReference": [
+                            "Related"
+                        ],
+                        "reference": {
+                            "resource": "related.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "ID"
+                ]
+            },
+            "url": "contributions.csv"
+        },
+        {
+            "dc:description": "Groups of related items from ContributionTable.",
+            "dc:extent": 41,
+            "tableSchema": {
+                "columns": [
+                    {
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "name": "ID"
+                    },
+                    {
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#contributionReference",
+                        "separator": " ",
+                        "name": "Stick_IDs"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": [
+                            "Stick_IDs"
+                        ],
+                        "reference": {
+                            "resource": "contributions.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "ID"
+                ]
+            },
+            "url": "related.csv"
+        }
+    ]
+}

@@ -1,0 +1,160 @@
+ID,Name,Macroarea,Latitude,Longitude,Glottocode,ISO639P3code,Austlang_Code
+1,Waka Waka / Wakka Wakka,,-26.248,151.868,waka1274,wkw,E28
+2,Woiwurrung / Woiwurrung,,-37.64264501,145.5879962,woiw1237,wyi,S36
+3,Wanyiwalku / Wanyiwalku,,,,bagu1250,,D21
+4,Mayi-Kulan / Mayi-Kulan,,-20.4352,140.481,mayk1239,mnt,G25
+5,Mayi-Yapi / Mayi-Yapi,,-19.25,140.61,mayi1235,xyj,G20
+6,Gugu Mini / Kuku Mini,,,,gugu1257,ggm,Y94
+7,Wotjobaluk / Wotjobaluk,,-35.82105,141.41791,wotj1234,xwt,S88
+8,Narangga / Narungga,,-34.69,137.535,naru1238,nnr,L1
+9,Mandandanji / Mandandanji,,-26.573,148.978,mand1417,zmk,D44
+10,Yugambeh / Yugambeh,,,,,,E17
+11,Yagalingu / Yagalingu,,-23.8029,147.421,wadj1255,wdu,E43
+12,Wadjalang / Wadjalang,,,,,,D45
+13,Turubul / Turrbal,,-27.87648,152.46028,yaga1262,yxg,E86
+14,Gamilaraay / Gamilaraay / Gamilaroi / Kamilaroi,,-29.9037,149.543,gami1243,kld,D23
+15,Muruwari / MURUWARI / MURRAWARRI,,-28.9618,146.546,muru1266,zmu,D32
+16,Yuwaalaraay / Yuwaalaraay,,-29.758184,147.923684,yuwa1242,,D27
+17,Yambina / Yambina,,,,,,E51
+18,Gudjal / Gudjal,,-19.44157406,144.6482584,gudj1237,,E60
+19,Karuwali / Karuwali,,-25.833018,140.026291,karr1236,rxw,L35
+20,Minkin / Mingginda,,-17.736653,139.541931,mink1237,xxm,G26
+21,Yukulta / Yukulta / Ganggalidda,,-17.5446,139.426,gang1267,gcd,G34
+22,Linngithigh / Linngithigh,,-12.771375,141.962,leni1238,lnj,Y26
+23,Alngith / Alngith,,-12.5324,141.938,alng1239,aid,Y32
+24,Kuku Nyungkul / Kuku Nyungkul,,,,kuku1274,,Y90
+25,Djabugay / Djabugay / Tjapukai^,,-16.596,145.388,dyaa1242,dyy,Y106
+26,Larrakia / Larrakia,,-12.4111,130.922,lara1258,lrg,N21
+27,Jingulu / Jingulu,,-17.165,133.659,djin1251,jig,C22
+28,Yugul / Yugul,,,,yugu1250,ygu,N85
+29,Binbinka / Binbinka,,-16.55208,134.78661,binb1242,,N138
+30,Mangarrayi / Mangarrayi,,-14.8,133.5,mang1381,mpc,N78
+31,Ngayawangka / Ngadawanga,,,,,,A30
+32,Djirbal / DYIRBAL / JIRRBAL,,-17.4516,145.544,dyir1250,dbl,Y123
+33,Galaagu / Kalarku,,-31.7154,118.911,kala1379,kba,A2
+34,Mirniny / Mirning,,,,,,A9
+35,Giraiwurung / Keerray Woorroong / Kirrae Whurrong,,-38.155612905976,141.53965852318,warr1257,gjm,S25
+36,Wathawurrung / Wathawurrung / Wadawurrung / Wathaurong,,-37.68777565,144.1013148,wath1238,wth,S29
+37,Warrgamay / Warrgamay^,,-18.5468,146.179,warr1255,wgy,Y134
+38,Gabalbara / Gabulbarra,,,,,,E45
+39,Guwinmal / Guwinmal,,,,,,E49
+40,Pitta-Pitta / Pitta Pitta,,-22.7952,139.983,pitt1247,pit,G6
+41,Karanya / Karanya,,,,,,L32
+42,Kalkatungu / Kalkatungu / Kalkadoon,,-21.0,139.5,kalk1246,ktg,G13
+43,Danggali / Thangkaali,,,,,,D14
+44,Gunditjmara / Dhauwurd Wurrung^,,,,gund1249,wkr,S20
+45,Lardil / Lardil,,-16.56152,139.4343,lard1243,lbz,G38
+46,Gunggari / Gunggari,,-24.2182,143.222,kung1258,kgl,D37
+47,Luritja / Luritja,,-23.2963,130.643,pint1250,piu,C7.1
+48,Tiwi / Tiwi,,-11.6308,130.949,tiwi1244,tiw,N20
+49,Ngarinyin / Ngarinyin,,-16.4006,126.433,ngar1284,ung,K18
+50,Worrorra / Worrorra,,-15.612781,124.881218,worr1237,wro,K17
+51,Unggumi / Unggumi,,-15.65,124.67,ungg1243,xgu,K14
+52,Yiiji / Yiiji,,-14.8347,125.72,wuna1249,wub,K32
+53,Bunuba / Bunuba,,-17.8297,125.631,buna1275,bck,K5
+54,Kija / Gija / Kija,,-17.5758,127.392,kitj1240,gia,K20
+55,Ngiyambaa / NGIYAMPAA / NGEMPA,,-30.6481,146.18,wang1291,wyb,D22
+56,Wiradjuri / Wiradjuri,,-34.0742,145.994,wira1262,wrh,D10
+57,Dhangu / Dhangu,,-11.9493,135.752,dhan1270,dhg,N192
+58,Mengerr / Mengerrdji,,-12.2391,132.973,mang1382,zme,N53
+59,Kamu / Kamu,,-13.5393,131.098,kamu1258,xmu,N33
+60,Warndarang / Warndarrang,,-14.2996,135.705,wand1263,wnd,N120
+61,Watjarri / Wajarri / Wadjarri,,-28.1761,117.153,waja1257,wbv,A39
+62,Dhuwal / Gumatj,,-12.25254,136.83042,guma1253,gnn,N141
+63,Jawoyn / Jawoyn,,-14.1361,133.002,djau1244,djn,N57
+64,Alyawarr / Alyawarr,,-21.0427,136.835,alya1239,aly,C14
+65,Yirandali / Yirandali,,-20.65810118,143.9625916,yira1239,ljw,L42
+66,Yan-nhangu / Yan-nhangu,,-12.0853,134.877,yann1237,jay,N72
+67,Ngarinyman / NGARINYMAN,,-15.4661,130.651,ngar1235,nbj,C27
+68,Wurrugu / Wurrugu,,-11.364,132.303,wurr1238,wur,N37
+69,Western Arrarnte / Western Arrarnta,,-24.05052,133.24621,west2441,are,C47
+70,Jiwarliny / Juwaliny,,-20.34239,122.28179,djuw1238,,A88
+71,Ngarluma / Ngarluma,,-20.9235,117.203,ngar1287,nrl,W38
+72,Warriyangga / Warriyangga,,-24.353,116.927,wari1262,wri,W22
+73,Wirangu / Wirangu,,-32.0,134.0,wira1265,wgu,C1
+74,Dagoman / Dagoman,,-15.764,132.379,dago1245,dgn,N38
+75,Gagudju / Gaagudju,,-12.5176,132.643,gaga1251,gbu,N50
+76,Anindilyakwa / Anindilyakwa,,-13.99904,136.6415,anin1240,aoi,N151
+77,Ngatjumaya / Ngadjumaya / Ngadju,,-32.02447,124.46601,ngad1258,nju,A3
+78,Flinders Island / Walmbarddha,,,,,,Y147
+79,Mutumui / Barrow Point,,-14.9424,144.831,gugu1255,kky,Y63.1
+80,Umbindhamu / Ganganda,,-13.921,143.328,umbi1243,umd,Y138
+81,Lamalama / Morrobolam,,-14.559,143.977,lamu1254,lby,Y55
+82,Flinders Island / Flinders Island language,,-14.1812,144.259,flin1247,fln,Y67
+83,Djinang / Djinang,,-12.462,134.82,djin1253,dji,N94.1
+84,Ganalbingu / Ganhalpuyngu,,,,gana1269,,N83
+85,Yankunytjatjara / Yankunytjatjara,,-26.4064,133.577,yank1247,kdd,C4
+86,Maung / Mawng,,-11.66,133.376,maun1240,mph,N64
+87,Konbudj / Gonbudj,,,,,,N224
+88,Ganggalinda / Yangkaal,,-16.74,138.023,nyan1300,nny,G37
+89,Kukatja / Kukatja,,-20.3321,127.666,kuka1246,kux,A68
+90,Pitjantjatjara / Pitjantjatjara,,-26.9704,131.357,pitj1243,pjt,C6
+91,Wik Ngatharr / Wik Ngathanya,,-13.8691,141.532,wikn1245,wig,Y56
+92,Adnyamathanha / Wailpi,,-30.1451,138.671,adny1235,adt,L55
+93,Parnkala / Barngarla,,-33.3036,136.079,bang1339,bjb,L6
+94,Yolngu / YOLNGU MATHA,,,,yuul1239,,N230
+95,Nyungar / NOONGAR / NYOONGAR,,-33.1199,118.151,nyun1247,nys,W41
+96,Gunwinggu / Kuninjku,,,,mura1269,,N173
+97,Tjupany / Tjupan,,,,,,A31
+98,Yuru / Yuru,,-19.836,147.361,yuru1264,ljx,E62
+99,Biri / Biri^,,-20.1494,146.67,biri1256,bzr,E56
+100,Guugu-Yimidhirr / GUUGU YIMIDHIRR,,-14.9424,144.831,gugu1255,kky,Y82
+101,Wangkathaa / Wangkatha,,,,,,A12
+102,Yolngu / Murngin,,,,yuul1239,,N117.1
+103,Yiiji / Yiiji,,,,yiij1234,,K32
+104,Yingkarta / Yingkarta,,-25.4446,115.58,ying1247,yia,W19
+105,Miwa / Miwa,,-14.3484,126.921,miwa1242,vmi,K44
+106,Gugu Warra / Kuku-Warra,,-12.713,142.569,gugu1256,wrw,Y80
+107,Lamalama / Mbarrumbathama,,-14.559,143.977,lamu1254,lby,Y136
+108,Wakaya / Wakaya,,-20.329,137.623,waga1260,wga,C16
+109,Ngandi / Ngandi,,-12.8448,134.649,ngan1295,nid,N90
+110,Gureng Gureng / GOORENG GOORENG,,-25.3893,151.175,gure1255,gnr,E32
+111,Mayi-Thakurti / Mayi-Thakurti / Mitakoodi,,-20.0,140.63,mayi1234,xyt,G16
+112,Mayawali / Maiawali,,,,,,L40
+113,Warluwarra / Warluwarra^,,-22.2909,138.738,warl1256,wrb,G10
+114,Wangkayutyuru / Wangka-Yutjurru^,,,,,,G5
+115,Yinjilanji / Indjilandji,,-19.24252,137.5894,yind1248,yil,G14
+116,Nyamal / Nyamal,,-21.6092,119.693,nyam1271,nly,A58
+117,Wubuy / Wubuy / Nunggubuyu,,-14.2623,135.753,nung1290,nuy,N128
+118,Wik Mungkan / Wik Mungkan,,-13.98051,141.81611,wikm1247,wim,Y57
+119,Yangman / Yangman,,-14.4964,132.52,yang1288,jng,N68
+120,Djapu / Djapu,,-12.879764,136.417978,djap1238,,N145
+121,Gunwinggu / Kune,,,,gune1238,,N70
+122,Wunambal / Wunambal,,-14.8347,125.72,wuna1249,wub,K22
+123,Nulit / Nulit,,,,,,S91
+124,Kurnai / GUNAI / KURNAI,,-38.58,146.5,gana1278,unn,S68
+125,Muk-Thang / Brabalung,,,,,,S45
+126,Thangguai / Krauatungalang,,,,,,S48
+127,Bidhawal / Bidawal,,-37.05,148.93,gana1268,ihw,S49
+128,Malak Malak / Malak Malak,,-13.427,130.664,mull1237,mpb,N22
+129,Yanyuwa / Yanyuwa,,-15.7621,136.055,yany1243,jao,N153
+130,Ngaanyatjarra / Ngaanyatjarra,,-25.7514,127.602,ngaa1240,ntj,A38
+131,Warrwa / Warrwa,,-17.0965,123.971,warr1258,wwr,K10
+132,Karajarri / Karajarri,,-18.6771,122.334,kara1476,gbd,A64
+133,Burarra / Burarra,,-12.3061,134.365,bura1267,bvr,N82
+134,Gunibidji / Ndjebbana,,-12.0133,134.097,djee1236,djj,N74
+135,Gunwinggu / Kunwinjku,,,,guma1252,,N65
+136,Iwaidja / Iwaidja,,-11.3379,132.453,iwai1244,ibd,N39
+137,Duungidjawu / Duungidjawu,,-25.3987,152.345,duun1241,,E20
+138,Ngangikurunggurr / NGAN'GI,,-14.268,131.237,nang1259,nam,N157
+139,no code / Marri Tjevin,,-13.8754,129.844,mari1421,zmj,N161
+140,Ngunawal / Ngunawal / Ngunnawal,,-36.25,148.77,ngun1277,xul,D3
+141,Eora / Eora,,,,,,S61
+142,Muruwari / MURUWARI,,-28.9618,146.546,muru1266,zmu,D32
+143,Guwar / Guwar,,-27.16698973,153.3998245,guwa1244,,E26
+144,Yuat / Yuat,,,,,,W11
+145,Mara / Marra,,-14.7927,134.865,mara1385,mec,N112
+146,Alawa / Alawa,,-15.5458,134.282,alaw1244,alh,N92
+147,Bachamal / Batjamalh,,,,,,N31
+148,Warrnambool / Dhauwurd Wurrung^,,,,gund1249,wkr,S20
+149,Djabwurung / Djab Wurrung^,,,,djab1234,tjw,S26
+150,Wangkumara / Wangkumara,,-27.10149,143.19619,wong1246,xwk,L25
+151,Yuin / Yuin,,,,yuin1242,,S67
+152,Purduna / Burduna,,-22.9646,114.658,burd1238,bxn,W24
+153,Pinikura / Pinikura,,-22.4729,116.538,pini1244,pnv,W34
+154,Diyari / Dieri,,-28.1667,138.0,dier1241,dif,L17
+155,Arakwal / Arakwal,,,,arak1254,rkw,E13
+156,Jaminjung / Jaminjung,,,,jami1236,,N18
+157,no code / Murrinh-kura,,,,murr1261,,N158
+158,Mayi-Kutuna / Mayi-Kutuna,,-18.1147,140.337,maya1280,xmy,G24
+159,Nguburindi / Nguburinji,,,,ngub1238,,G19
