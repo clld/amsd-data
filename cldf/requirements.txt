@@ -22,8 +22,8 @@ openpyxl==3.1.5
 platformdirs==4.9.6
 pluggy==1.6.0
 prettytable==3.17.0
--e git+https://github.com/dlce-eva/pyamsd.git@51750b7be7e9397924d2ed111d011ed1c83bfe0a#egg=pyamsd
--e git+https://github.com/cldf/pycldf@804b92a95b16c1c2cfbb498b23f37024bf2dc5e2#egg=pycldf
+-e git+https://github.com/dlce-eva/pyamsd.git@0193b12a0eb613970c01582e9eb7d4104cf41077#egg=pyamsd
+-e git+https://github.com/cldf/pycldf@68263b9a1801c3865968308f61f12512ebf59de9#egg=pycldf
 pycountry==26.2.16
 -e git+https://github.com/glottolog/pyglottolog@8779af14ff0121373485d9ac296ac60f41accbf7#egg=pyglottolog
 pylatexenc==2.10
