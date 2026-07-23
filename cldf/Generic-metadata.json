@@ -14,7 +14,7 @@
         {
             "rdf:about": "https://github.com/clld/amsd-data",
             "rdf:type": "prov:Entity",
-            "dc:created": "96ef82f",
+            "dc:created": "v2026.07",
             "dc:title": "Repository"
         },
         {
@@ -116,7 +116,7 @@
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#MediaTable",
-            "dc:extent": 3531,
+            "dc:extent": 10472,
             "tableSchema": {
                 "columns": [
                     {

@@ -2,6 +2,7 @@ attrs==25.1.0
 babel==2.17.0
 bibtexparser==2.0.0b8
 cldfbench==2.0.1
+-e git+https://github.com/clld/amsd-data@c8d0dcd6f93fba0fffddec9a4f55603a42d1f3f3#egg=cldfbench_amsd
 cldfcatalog==1.7.0
 cldfzenodo==3.0.0
 clldutils==4.0.0
